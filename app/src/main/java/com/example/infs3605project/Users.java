@@ -2,6 +2,8 @@ package com.example.infs3605project;
 
 public class Users {
 
+    //not used for anything
+
     private String email;
     private String firstName;
     private String lastName;
