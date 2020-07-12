@@ -45,7 +45,7 @@ public class Profile extends AppCompatActivity {
         userId = fAuth.getCurrentUser().getUid();
         Log.d("PROFILE", "USERID: " + userId);
 
-        //assign retrieved data using getProperities
+        //assign retrieved data using getProperties
 
         DocumentReference dr = fStore.collection("Users").document(userId);
         dr.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {

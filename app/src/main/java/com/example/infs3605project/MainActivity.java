@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button profileBtn;
+    Button profileBtn, purityTestBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         profileBtn = findViewById(R.id.profileBtn);
+        purityTestBtn = findViewById(R.id.purityTestBtn);
 
         profileBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +27,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), Profile.class));
             }
         });
+
+        purityTestBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PurityTest.class));
+            }
+        });
+
+
 
     }
 
