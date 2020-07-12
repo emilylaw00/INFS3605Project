@@ -2,6 +2,7 @@ package com.example.infs3605project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +25,7 @@ public class PurityTest extends AppCompatActivity {
     ListView listView;
     MyAdapter myAdapter;
     TextView scoreTextView;
-    Button submit;
+    Button submit, homeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class PurityTest extends AppCompatActivity {
         listView = findViewById(R.id.listView);
         scoreTextView = findViewById(R.id.score);
         submit = findViewById(R.id.submit);
+        homeBtn = findViewById(R.id.homeBtn);
 
         scoreTextView.setText("20");
 
@@ -64,33 +66,60 @@ public class PurityTest extends AppCompatActivity {
             }
         });
 
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
+
 
     }
 
 
     void initData() {
-        TestQuestion data0 = new TestQuestion();
-        data0.setQuestion("I use the same password for everything");
-        dataList.add(data0);
 
-        TestQuestion data1 = new TestQuestion();
-        data1.setQuestion("Test");
-        dataList.add(data1);
+        dataListInsert("1. I know what a phishing attack is (can go into more specifics eg. spear phishing, vhishing)");
+        dataListInsert("2. I’ve never feel victim to an cyber scam/attack");
+        dataListInsert("3. I’ve used 2-step authentication where possible");
+        dataListInsert("4. I’ve used 3-step authentication where possible");
+        dataListInsert("5. I would let strangers use my phone (for whatever reason)");
+        dataListInsert("6. I would let my acquaintances use my phone");
+        dataListInsert("7. I use the same password for multiple accounts");
+        dataListInsert("8. I use the same password for all accounts");
+        dataListInsert("9. My passwords are considered strong by most standards(unique combinations)");
+        dataListInsert("10. I lock all my devices with a password/authentication measure");
+        dataListInsert("11. I lock all apps that have personal data with an authentication measure");
+        dataListInsert("12. I read the terms & conditions before any agreement");
+        dataListInsert("13. I check a company’s privacy policy before engaging in any activity");
+        dataListInsert("14. I think twice before clicking any links/content within an email");
+        dataListInsert("15. I open any email that is sent to me without checking who it’s from");
+        dataListInsert("16. I filter out/block spam email as soon as possible");
+        dataListInsert("17. I have used public wifi networks that don’t require authentication");
+        dataListInsert("18. I will use public wifi networks when outside if possible");
+        dataListInsert("19. I have used a VPN for security purposes");
+        dataListInsert("20. I regularly use a VPN for security purposes");
+        dataListInsert("21. I use separate devices for work/personal use");
+        dataListInsert("22. I always update my device’s security software when possible");
+        dataListInsert("23. I don’t mind sharing personal information over social media channels");
+        dataListInsert("24. I regularly change my passwords where there is personal information");
+        dataListInsert("25. I have clicked on unknown links before in an email");
+        dataListInsert("26. I research what I am downloading before installing an application");
+        dataListInsert("27. I regularly back-up my critical data");
+        dataListInsert("28. I click no when websites ask me to remember password");
+        dataListInsert("29. I delete sensitive material when there is no use for it anymore");
+        dataListInsert("30. I often run anti-malware/anti-virus software tests");
+        dataListInsert("31. I use network firewall for every application");
+        dataListInsert("32. I avoid all pop-ups that appear");
 
-        TestQuestion data2 = new TestQuestion();
-        data2.setQuestion("Test");
-        dataList.add(data2);
-
-        TestQuestion data3 = new TestQuestion();
-        data3.setQuestion("Test");
-        dataList.add(data3);
-
-        TestQuestion data4 = new TestQuestion();
-        data4.setQuestion("Test");
-        dataList.add(data4);
-
-
+        
         userLogin.setFirstName("tom");
+    }
+
+    public void dataListInsert(String question) {
+        TestQuestion data = new TestQuestion();
+        data.setQuestion(question);
+        dataList.add(data);
     }
 
     private class MyAdapter extends BaseAdapter {
