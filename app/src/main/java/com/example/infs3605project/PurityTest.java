@@ -79,43 +79,32 @@ public class PurityTest extends AppCompatActivity {
 
     void initData() {
 
-        dataListInsert("1. I know what a phishing attack is (can go into more specifics eg. spear phishing, vhishing)");
-        dataListInsert("2. I’ve never feel victim to an cyber scam/attack");
-        dataListInsert("3. I’ve used 2-step authentication where possible");
-        dataListInsert("4. I’ve used 3-step authentication where possible");
-        dataListInsert("5. I would let strangers use my phone (for whatever reason)");
-        dataListInsert("6. I would let my acquaintances use my phone");
-        dataListInsert("7. I use the same password for multiple accounts");
-        dataListInsert("8. I use the same password for all accounts");
-        dataListInsert("9. My passwords are considered strong by most standards(unique combinations)");
-        dataListInsert("10. I lock all my devices with a password/authentication measure");
-        dataListInsert("11. I lock all apps that have personal data with an authentication measure");
-        dataListInsert("12. I read the terms & conditions before any agreement");
-        dataListInsert("13. I check a company’s privacy policy before engaging in any activity");
-        dataListInsert("14. I think twice before clicking any links/content within an email");
-        dataListInsert("15. I open any email that is sent to me without checking who it’s from");
-        dataListInsert("16. I filter out/block spam email as soon as possible");
-        dataListInsert("17. I have used public wifi networks that don’t require authentication");
-        dataListInsert("18. I will use public wifi networks when outside if possible");
-        dataListInsert("19. I have used a VPN for security purposes");
-        dataListInsert("20. I regularly use a VPN for security purposes");
-        dataListInsert("21. I use separate devices for work/personal use");
-        dataListInsert("22. I always update my device’s security software when possible");
-        dataListInsert("23. I don’t mind sharing personal information over social media channels");
-        dataListInsert("24. I regularly change my passwords where there is personal information");
-        dataListInsert("25. I have clicked on unknown links before in an email");
-        dataListInsert("26. I research what I am downloading before installing an application");
-        dataListInsert("27. I regularly back-up my critical data");
-        dataListInsert("28. I click no when websites ask me to remember password");
-        dataListInsert("29. I delete sensitive material when there is no use for it anymore");
-        dataListInsert("30. I often run anti-malware/anti-virus software tests");
-        dataListInsert("31. I use network firewall for every application");
-        dataListInsert("32. I avoid all pop-ups that appear");
+        dataListInsert("1. I use the same password for most of my accounts");
+        dataListInsert("2. I click on interesting spam emails");
+        dataListInsert("3. I do not use a multi-factor authentication");
+        dataListInsert("4. I have not set up a disaster recovery / incident response plan");
+        dataListInsert("5. I do not use email protection softwares");
+        dataListInsert("6. I use a password that is easy to remember");
+        dataListInsert("7. I never log out of my accounts");
+        dataListInsert("8. I do not keep up to date with cyber security news");
+        dataListInsert("9. I often think that cyber security attacks cannot happen to me");
+        dataListInsert("10. I treat cybersecurity as a one-time project");
+        dataListInsert("11. I click on links sent to me from unknown phone numbers");
+        dataListInsert("12. I pick up phones with no caller ID");
+        dataListInsert("13. I do not check the sender email address before clicking on an email addressed to me");
+        dataListInsert("14. I do not update my device’s security software when possible");
+        dataListInsert("15. I do not mind sharing personal information over social media channels");
+        dataListInsert("16. I use a separate device for work and personal use");
+        dataListInsert("17. I have never used a VPN for security purposes before");
+        dataListInsert("18. I click yes when websites ask me to remember my sensitive information");
+        dataListInsert("19. If I picked up a USB from the ground, I would insert it into my computer out of pure curiosity");
+        dataListInsert("20. I do not use a VPN when accessing public wifi networks");
 
-        
+
         userLogin.setFirstName("tom");
     }
 
+    //insert the question into the purity test page
     public void dataListInsert(String question) {
         TestQuestion data = new TestQuestion();
         data.setQuestion(question);
