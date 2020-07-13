@@ -53,10 +53,10 @@ public class PurityTest extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int count = 0;
+                int count = 20;
                 for (TestQuestion data : dataList) {
                     if (data.isChecked()) {
-                        count++;
+                        count--; //decrementing score
                     }
                 }
 
@@ -88,7 +88,7 @@ public class PurityTest extends AppCompatActivity {
         dataListInsert("7. I never log out of my accounts");
         dataListInsert("8. I do not keep up to date with cyber security news");
         dataListInsert("9. I often think that cyber security attacks cannot happen to me");
-        dataListInsert("10. I treat cybersecurity as a one-time project");
+        dataListInsert("10. I treat cyber security as a one-time project");
         dataListInsert("11. I click on links sent to me from unknown phone numbers");
         dataListInsert("12. I pick up phones with no caller ID");
         dataListInsert("13. I do not check the sender email address before clicking on an email addressed to me");
@@ -100,8 +100,8 @@ public class PurityTest extends AppCompatActivity {
         dataListInsert("19. If I picked up a USB from the ground, I would insert it into my computer out of pure curiosity");
         dataListInsert("20. I do not use a VPN when accessing public wifi networks");
 
-
         userLogin.setFirstName("tom");
+
     }
 
     //insert the question into the purity test page
@@ -160,10 +160,10 @@ public class PurityTest extends AppCompatActivity {
                     checkBox.setChecked(!data.isChecked());
                     data.setChecked(checkBox.isChecked());
 
-                    int count = 0;
+                    int count = 20;
                     for (TestQuestion data : dataList) {
                         if (data.isChecked()) {
-                            count++;
+                            count--;
                         }
                     }
                     scoreTextView.setText("" + count);
