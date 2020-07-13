@@ -11,9 +11,9 @@
         android:title="Modules"
         />
     <item
-        android:id="@+id/nav_cybersims"
-        android:icon="@drawable/ic_baseline_emoji_flags_24"
-        android:title="CyberSims"
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Profile"
         />
     <item
         android:id="@+id/nav_bot"
