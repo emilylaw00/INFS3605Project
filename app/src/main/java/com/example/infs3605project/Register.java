@@ -111,7 +111,7 @@ public class Register extends AppCompatActivity {
                             //store data to fireStore
                             userID = fAuth.getCurrentUser().getUid(); //getting user ID of currently registered user
                             DocumentReference documentReference = fStore.collection("Users").document(userID); //using USERID to create document
-                            //create user data using hashmap
+                            //create user data using hash-map
                             Map<String, Object> user = new HashMap<>();
                             user.put("firstName", firstName);
                             user.put("lastName", lastName);

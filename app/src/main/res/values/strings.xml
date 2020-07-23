@@ -15,4 +15,6 @@
     <string name="how_did_you_hear_about_cybergrad">How did you hear about CyberGrad?</string>
     <string name="area_of_study">Area of Study</string>
     <string name="confirm_password">Confirm Password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

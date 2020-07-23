@@ -1,9 +1,11 @@
 package com.example.infs3605project;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -14,8 +16,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class PurityTest extends AppCompatActivity {
 
@@ -26,6 +36,10 @@ public class PurityTest extends AppCompatActivity {
     MyAdapter myAdapter;
     TextView scoreTextView;
     Button submit, homeBtn;
+    String userID;
+
+    private FirebaseFirestore fStore = FirebaseFirestore.getInstance();
+    private FirebaseAuth fAuth = FirebaseAuth.getInstance();;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +77,30 @@ public class PurityTest extends AppCompatActivity {
                 userLogin.setPurityScore(count);
                 scoreTextView.setText("" + count + "/" + dataList.size());
                 Toast.makeText(view.getContext(), "Total Score: " + count + "/" + dataList.size(), Toast.LENGTH_SHORT).show();
+
+                //store the score in the DB
+                userID = fAuth.getCurrentUser().getUid(); //getting user ID of currently registered user
+                DocumentReference documentReference = fStore.collection("Purity Score").document(userID);
+
+                //create a map
+                Map<String, Object> purity_score = new HashMap<>();
+                purity_score.put("Score", Integer.toString(count));
+                documentReference.set(purity_score).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("SAVED", "onSuccess: user score is saved for " + userID);
+                    }
+                }) .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("SAVED", "onFailure: " + e.toString());
+                    }
+                });
+
+                //send intent to the score activity
+                startActivity(new Intent(getApplicationContext(), PurityScore.class));
+
+
             }
         });
 
@@ -73,9 +111,7 @@ public class PurityTest extends AppCompatActivity {
             }
         });
 
-
     }
-
 
     void initData() {
 

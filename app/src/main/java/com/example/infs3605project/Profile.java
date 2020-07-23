@@ -22,13 +22,11 @@ import java.util.Objects;
 public class Profile extends AppCompatActivity {
 
     Button profileBtn;
-    TextView mUserName, mUserEmail;
+    TextView mUserName, mUserEmail, textV;
     ImageView mProfilePic;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +36,7 @@ public class Profile extends AppCompatActivity {
         mUserName = findViewById(R.id.userName);
         mUserEmail = findViewById(R.id.userEmail);
         mProfilePic = findViewById(R.id.profilePic);
+        textV = findViewById(R.id.textView);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
