@@ -22,24 +22,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="80dp"
-        android:background=""
         android:fontFamily="@font/lato"
         android:text="Hello User"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
-
-    <ImageView
-        android:id="@+id/profilePic"
-        android:layout_width="118dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="60dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/circle"
-        tools:layout_editor_absoluteX="255dp" />
 
     <TextView
         android:id="@+id/textView12"
@@ -51,7 +39,7 @@
         android:text="Here are your top picks for today"
         android:textColor="#FFFFFF"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <Button
@@ -70,11 +58,23 @@
         android:id="@+id/btnCyberTips"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="170dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/btnyellow"
         android:text="Cyber Tips"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/btnCyberNews"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/btnProfile"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
