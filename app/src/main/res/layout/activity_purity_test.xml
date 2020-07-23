@@ -31,7 +31,7 @@
             android:layout_marginStart="28dp"
             android:layout_marginEnd="65dp"
             android:fontFamily="@font/lato"
-            android:gravity="center_vertical|right"
+            android:gravity="center_vertical|center"
             android:text="Security Purity Test"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
@@ -79,11 +79,13 @@
 
                 <Button
                     android:id="@+id/submit"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/btncolor"
                     android:text="Submit"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    />
+
             </LinearLayout>
 
         </LinearLayout>
