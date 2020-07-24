@@ -5,29 +5,39 @@
     android:id="@+id/scoreBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3B88F5"
     tools:context=".PurityScore">
 
     <Button
         android:id="@+id/finishBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="579dp" />
+        android:layout_marginTop="50dp"
+        android:background="#FFFFFF"
+        android:text="Home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTxt" />
 
     <TextView
         android:id="@+id/scoreTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="455dp" />
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="100dp"
+        android:text="Here is your score"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedbackTxt" />
 
     <TextView
         android:id="@+id/feedbackTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="260dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="269dp" />
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -100,7 +100,6 @@ public class PurityTest extends AppCompatActivity {
                 //send intent to the score activity
                 startActivity(new Intent(getApplicationContext(), PurityScore.class));
 
-
             }
         });
 
