@@ -33,7 +33,7 @@
                 android:id="@+id/textView"
                 android:layout_width="413dp"
                 android:layout_height="61dp"
-                android:background="@drawable/rect"
+                android:background="@drawable/topflap"
                 android:fontFamily="@font/lily_script_one"
                 android:gravity="center"
                 android:text="@string/create_new_account"
