@@ -25,7 +25,7 @@ import java.util.concurrent.Executor;
 
 public class ProfileFragment extends Fragment {
 
-    TextView mUserName, mUserEmail, textV;
+    TextView mUserName, mUserScore, textV;
     ImageView mProfilePic;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -37,10 +37,10 @@ public class ProfileFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        mUserName = v.findViewById(R.id.userName);
-        mUserEmail = v.findViewById(R.id.userEmail);
+        mUserName = v.findViewById(R.id.txtFirstName);
+        mUserScore = v.findViewById(R.id.txtScore);
         mProfilePic = v.findViewById(R.id.profilePic);
-        textV = v.findViewById(R.id.textView);
+        //textV = v.findViewById(R.id.textView);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -55,10 +55,20 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 //update the data
-                mUserEmail.setText(documentSnapshot.getString("email"));
                 mUserName.setText(documentSnapshot.getString("firstName"));
             }
         });
+
+        DocumentReference drr = fStore.collection("Purity Score").document(userId);
+        drr.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                //update the data
+                mUserScore.setText(documentSnapshot.getString("Score"));
+            }
+        });
+
+
         return v;
     }
 }

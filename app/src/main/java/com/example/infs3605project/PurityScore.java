@@ -1,5 +1,6 @@
 package com.example.infs3605project;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -12,7 +13,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class PurityScore extends AppCompatActivity {
 
@@ -38,10 +43,15 @@ public class PurityScore extends AppCompatActivity {
 
         //retrieve the stored score
 
+        DocumentReference drr = fStore.collection("Purity Score").document(userId);
+        drr.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
+                //update the data
+                mScore.setText(documentSnapshot.getString("Score"));
+            }
+        });
 
-
-        int score = getIntent().getIntExtra("score",0);
-        mScore.setText(String.valueOf(score));
         //total.setText("Out of "+ String.valueOf(getIntent().getIntExtra("total",0)));
 
 
