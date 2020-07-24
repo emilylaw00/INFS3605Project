@@ -68,7 +68,7 @@
             <ListView
                 android:id="@+id/listView"
                 android:layout_width="match_parent"
-                android:layout_height="1550dp"
+                android:layout_height="1548dp"
                 android:layout_weight="1">
 
             </ListView>
@@ -79,26 +79,24 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total: " />
-
-                <TextView
                     android:id="@+id/score"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:paddingLeft="4dp"
-                    android:text="TextView" />
+                    android:paddingLeft="4dp" />
 
                 <Button
                     android:id="@+id/submit"
-                    android:layout_width="150dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/btncolor"
                     android:text="Submit"
-                    android:textColor="#FFFFFF"
-                    />
+                    android:textColor="#FFFFFF" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
 
             </LinearLayout>
 

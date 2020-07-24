@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,7 +22,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 
 public class PurityScore extends AppCompatActivity {
 
-    private TextView mScore, mTotal, mFeedback;
+    private TextView mScore, mFeedback;
     private Button finishBtn;
     private ConstraintLayout scoreBg;
 
@@ -43,17 +44,34 @@ public class PurityScore extends AppCompatActivity {
 
         //retrieve the stored score
 
+        fAuth = FirebaseAuth.getInstance();
+        fStore = FirebaseFirestore.getInstance();
+
+        userId = fAuth.getCurrentUser().getUid(); //getting user ID of currently registered user
+        Log.d("Purity Score", "USERID: " + userId);
+
+
+
         DocumentReference drr = fStore.collection("Purity Score").document(userId);
-        drr.addSnapshotListener(new EventListener<DocumentSnapshot>() {
+        drr.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 //update the data
-                mScore.setText(documentSnapshot.getString("Score"));
+                String score = documentSnapshot.getString("Score");
+                mScore.setText(score);
+                int scoreNo = Integer.parseInt(score);
+                if(scoreNo <= 5) {
+                    mFeedback.setText("That is soooooo bad");
+                } else if (scoreNo < 10 && scoreNo > 5){
+                    mFeedback.setText("That is not too bad");
+
+                } else if (scoreNo >= 10 && scoreNo < 15) {
+                    mFeedback.setText("It is a decent score but there is definitely lots of area for improvement");
+                } else if (scoreNo >= 15) {
+                    mFeedback.setText("You are absolutely so very safe! Well done");
+                }
             }
         });
-
-        //total.setText("Out of "+ String.valueOf(getIntent().getIntExtra("total",0)));
-
 
 
 
