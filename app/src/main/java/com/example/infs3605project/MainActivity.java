@@ -15,29 +15,15 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
+
     Button profileBtn, purityTestBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Buttons
-        profileBtn = findViewById(R.id.profileBtn);
-        purityTestBtn = findViewById(R.id.purityTestBtn);
 
-        profileBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), Profile.class));
-            }
-        });
 
-        purityTestBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), PurityTest.class));
-            }
-        });
 
         //Navigation bar is instantiated here
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
@@ -85,5 +71,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(),Login.class));
         finish();
     }
+
+
+
+
+
 
 }

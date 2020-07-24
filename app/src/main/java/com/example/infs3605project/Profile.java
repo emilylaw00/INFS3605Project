@@ -21,7 +21,7 @@ import java.util.Objects;
 
 public class Profile extends AppCompatActivity {
 
-    Button profileBtn;
+
     TextView mUserName, mUserEmail, textV;
     ImageView mProfilePic;
     FirebaseAuth fAuth;
