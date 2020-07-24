@@ -53,7 +53,7 @@ public class PurityTest extends AppCompatActivity {
         submit = findViewById(R.id.submit);
         homeBtn = findViewById(R.id.homeBtn);
 
-        scoreTextView.setText("20");
+        //scoreTextView.setText("20");
 
         myAdapter = new MyAdapter(dataList, scoreTextView);
         listView.setAdapter(myAdapter);
@@ -74,12 +74,13 @@ public class PurityTest extends AppCompatActivity {
                     }
                 }
 
-                userLogin.setPurityScore(count);
-                scoreTextView.setText("" + count + "/" + dataList.size());
-                Toast.makeText(view.getContext(), "Total Score: " + count + "/" + dataList.size(), Toast.LENGTH_SHORT).show();
+                //userLogin.setPurityScore(count);
+                //scoreTextView.setText("" + count + "/" + dataList.size());
+                //Toast.makeText(view.getContext(), "Total Score: " + count + "/" + dataList.size(), Toast.LENGTH_SHORT).show();
 
                 //store the score in the DB
                 userID = fAuth.getCurrentUser().getUid(); //getting user ID of currently registered user
+                Log.d("PROFILE", "USERID: " + userID);
                 DocumentReference documentReference = fStore.collection("Purity Score").document(userID);
 
                 //create a map
@@ -98,7 +99,7 @@ public class PurityTest extends AppCompatActivity {
                 });
 
                 //send intent to the score activity
-                startActivity(new Intent(getApplicationContext(), PurityScore.class));
+                startActivity(new Intent(PurityTest.this, PurityScore.class));
 
             }
         });
@@ -201,7 +202,7 @@ public class PurityTest extends AppCompatActivity {
                             count--;
                         }
                     }
-                    scoreTextView.setText("" + count);
+                    //scoreTextView.setText("" + count);
                 }
             });
 
