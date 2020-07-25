@@ -1,6 +1,7 @@
 package com.example.infs3605project;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,8 +53,8 @@ public class HomeFragment extends Fragment {
         swipeRefreshLayout = v.findViewById(R.id.swipeRefresh);
         recyclerView = v.findViewById(R.id.recyclerView);
 
-        etQuery = v.findViewById(R.id.etQuery);
-        btnSearch = v.findViewById(R.id.btnSearch);
+        //etQuery = v.findViewById(R.id.etQuery);
+        //btnSearch = v.findViewById(R.id.btnSearch);
         //btnAboutUs = v.findViewById(R.id.aboutUs);
         dialog = new Dialog(getContext());
 
@@ -64,47 +65,23 @@ public class HomeFragment extends Fragment {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                retrieveJson("",country,API_KEY);
+                retrieveJson();
             }
         });
-        retrieveJson("",country,API_KEY);
 
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!etQuery.getText().toString().equals("")){
-                    swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-                        @Override
-                        public void onRefresh() {
-                            retrieveJson(etQuery.getText().toString(),country,API_KEY);
-                        }
-                    });
-                    retrieveJson(etQuery.getText().toString(),country,API_KEY);
-                }else{
-                    swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-                        @Override
-                        public void onRefresh() {
-                            retrieveJson("",country,API_KEY);
-                        }
-                    });
-                    retrieveJson("",country,API_KEY);
-                }
-            }
-        });
+        retrieveJson();
+
+
 
         return v;
     }
 
-    public void retrieveJson(String query ,String country, String apiKey){
-
-
+    public void retrieveJson(){
         swipeRefreshLayout.setRefreshing(true);
         Call<Headlines> call;
-        if (!etQuery.getText().toString().equals("")){ //string not empty
-            call= ApiClient.getInstance().getApi().getSpecificData(query,apiKey);
-        }else{
-            call= ApiClient.getInstance().getApi().getHeadlines(country,apiKey);
-        }
+
+        call= ApiClient.getInstance().getApi().getCyberHeadlines();
+
 
         call.enqueue(new Callback<Headlines>() {
             @Override
