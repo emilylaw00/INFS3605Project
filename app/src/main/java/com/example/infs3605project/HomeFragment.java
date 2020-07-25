@@ -1,6 +1,7 @@
 package com.example.infs3605project;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,7 +65,7 @@ public class HomeFragment extends Fragment {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                retrieveJson("",country,API_KEY);
+                retrieveJson("cyber",country,API_KEY);
             }
         });
         retrieveJson("",country,API_KEY);
@@ -76,19 +77,26 @@ public class HomeFragment extends Fragment {
                     swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                         @Override
                         public void onRefresh() {
-                            retrieveJson(etQuery.getText().toString(),country,API_KEY);
+                            //retrieveJson(etQuery.getText().toString(),country,API_KEY);
+                            retrieveJson("cyber",country,API_KEY);
+                            Log.d("HomeFrag: ", "Query run by ");
                         }
                     });
-                    retrieveJson(etQuery.getText().toString(),country,API_KEY);
+                    //retrieveJson(etQuery.getText().toString(),country,API_KEY);
+                    retrieveJson("cyber",country,API_KEY);
                 }else{
                     swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                         @Override
                         public void onRefresh() {
-                            retrieveJson("",country,API_KEY);
+                            retrieveJson("cyber",country,API_KEY);
                         }
                     });
-                    retrieveJson("",country,API_KEY);
+                    retrieveJson("cyber",country,API_KEY);
                 }
+
+
+
+
             }
         });
 
@@ -96,14 +104,12 @@ public class HomeFragment extends Fragment {
     }
 
     public void retrieveJson(String query ,String country, String apiKey){
-
-
         swipeRefreshLayout.setRefreshing(true);
         Call<Headlines> call;
         if (!etQuery.getText().toString().equals("")){ //string not empty
             call= ApiClient.getInstance().getApi().getSpecificData(query,apiKey);
         }else{
-            call= ApiClient.getInstance().getApi().getHeadlines(country,apiKey);
+            call= ApiClient.getInstance().getApi().getCyberHeadlines();
         }
 
         call.enqueue(new Callback<Headlines>() {
