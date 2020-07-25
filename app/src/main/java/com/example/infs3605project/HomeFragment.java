@@ -53,8 +53,8 @@ public class HomeFragment extends Fragment {
         swipeRefreshLayout = v.findViewById(R.id.swipeRefresh);
         recyclerView = v.findViewById(R.id.recyclerView);
 
-        etQuery = v.findViewById(R.id.etQuery);
-        btnSearch = v.findViewById(R.id.btnSearch);
+        //etQuery = v.findViewById(R.id.etQuery);
+        //btnSearch = v.findViewById(R.id.btnSearch);
         //btnAboutUs = v.findViewById(R.id.aboutUs);
         dialog = new Dialog(getContext());
 
@@ -71,22 +71,7 @@ public class HomeFragment extends Fragment {
 
         retrieveJson();
 
-        btnSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                    swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-                        @Override
-                        public void onRefresh() {
-
-                            retrieveJson();
-
-                        }
-                    });
-
-
-            }
-        });
 
         return v;
     }
