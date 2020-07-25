@@ -65,36 +65,24 @@ public class HomeFragment extends Fragment {
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                retrieveJson("cyber",country,API_KEY);
+                retrieveJson();
             }
         });
-        retrieveJson("",country,API_KEY);
+
+        retrieveJson();
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!etQuery.getText().toString().equals("")){
+
                     swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                         @Override
                         public void onRefresh() {
-                            //retrieveJson(etQuery.getText().toString(),country,API_KEY);
-                            retrieveJson("cyber",country,API_KEY);
-                            Log.d("HomeFrag: ", "Query run by ");
+
+                            retrieveJson();
+
                         }
                     });
-                    //retrieveJson(etQuery.getText().toString(),country,API_KEY);
-                    retrieveJson("cyber",country,API_KEY);
-                }else{
-                    swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-                        @Override
-                        public void onRefresh() {
-                            retrieveJson("cyber",country,API_KEY);
-                        }
-                    });
-                    retrieveJson("cyber",country,API_KEY);
-                }
-
-
 
 
             }
@@ -103,14 +91,12 @@ public class HomeFragment extends Fragment {
         return v;
     }
 
-    public void retrieveJson(String query ,String country, String apiKey){
+    public void retrieveJson(){
         swipeRefreshLayout.setRefreshing(true);
         Call<Headlines> call;
-        if (!etQuery.getText().toString().equals("")){ //string not empty
-            call= ApiClient.getInstance().getApi().getSpecificData(query,apiKey);
-        }else{
-            call= ApiClient.getInstance().getApi().getCyberHeadlines();
-        }
+
+        call= ApiClient.getInstance().getApi().getCyberHeadlines();
+
 
         call.enqueue(new Callback<Headlines>() {
             @Override

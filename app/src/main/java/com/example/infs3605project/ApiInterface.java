@@ -20,7 +20,7 @@ public interface ApiInterface {
             @Query("apiKey") String apiKey
     );
 
-    @GET("everything?q=cyber&apiKey=08d54cfbf9e24f6d98db5e591a6f019e")
+    @GET("everything?q=cybersecurity&apiKey=08d54cfbf9e24f6d98db5e591a6f019e")
     Call<Headlines> getCyberHeadlines(
     );
 
