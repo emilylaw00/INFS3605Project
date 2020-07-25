@@ -14,6 +14,7 @@
         <activity android:name=".PurityScore"></activity>
         <activity android:name=".PurityTest" />
         <activity android:name=".Profile" />
+        <activity android:name=".Detailed"/>
         <activity android:name=".Login" />
         <activity android:name=".Register">
             <intent-filter>

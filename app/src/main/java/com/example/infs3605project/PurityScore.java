@@ -64,17 +64,13 @@ public class PurityScore extends AppCompatActivity {
                     mFeedback.setText("That is soooooo bad");
                 } else if (scoreNo < 10 && scoreNo > 5){
                     mFeedback.setText("That is not too bad");
-
-                } else if (scoreNo >= 10 && scoreNo < 15) {
+                } else if (scoreNo >= 10 && scoreNo < 15){
                     mFeedback.setText("It is a decent score but there is definitely lots of area for improvement");
-                } else if (scoreNo >= 15) {
+                } else if (scoreNo >= 15){
                     mFeedback.setText("You are absolutely so very safe! Well done");
                 }
             }
         });
-
-
-
 
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
