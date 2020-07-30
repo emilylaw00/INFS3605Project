@@ -1,5 +1,6 @@
 package com.example.infs3605project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -44,11 +46,22 @@ public class HomeFragment extends Fragment {
     final String API_KEY = "08d54cfbf9e24f6d98db5e591a6f019e";
     NewsAdapter mAdapter;
     List<Articles>  articles = new ArrayList<>();
+    Button cyberTips;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
+
+        cyberTips = v.findViewById(R.id.btnCyberTips);
+        cyberTips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fr = getFragmentManager().beginTransaction();
+                fr.replace(R.id.fragment_containter, new CyberTipsFragment());
+                fr.commit();
+            }
+        });
 
         swipeRefreshLayout = v.findViewById(R.id.swipeRefresh);
         recyclerView = v.findViewById(R.id.recyclerView);
