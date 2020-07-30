@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/topflap" />
 
     <TextView
-        android:id="@+id/txtFirstName"
+        android:id="@+id/txtCyberTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -34,13 +34,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/lato"
         android:text="Here are your top picks for today"
         android:textColor="#FFFFFF"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCyberTip" />
 
     <Button
         android:id="@+id/btnCyberNews"
@@ -87,7 +87,7 @@
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeRefresh"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
             <androidx.recyclerview.widget.RecyclerView
