@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".cyberTips"></activity>
+        <activity android:name=".CyberSimIntro"></activity>
+        <activity android:name=".CyberSim.CyberSimIntro" />
+        <activity android:name=".cyberTips" />
         <activity android:name=".PurityScore" />
         <activity android:name=".PurityTest" />
         <activity android:name=".Profile" />

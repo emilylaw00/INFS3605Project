@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 public class EducationFragment extends Fragment {
 
     Button purityTestBtn;
+    Button cyberSim;
 
     @Nullable
     @Override
@@ -21,6 +22,8 @@ public class EducationFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_education, container, false);
 
         purityTestBtn = v.findViewById(R.id.purityTestBtn);
+        cyberSim = v.findViewById(R.id.simBtn);
+
 
         purityTestBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +31,14 @@ public class EducationFragment extends Fragment {
                 startActivity(new Intent(getContext(), PurityTest.class));
             }
         });
+
+        cyberSim.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), CyberSimIntro.class));
+            }
+        });
+
 
         return v;
 
