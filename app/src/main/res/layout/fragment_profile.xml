@@ -8,29 +8,16 @@
     android:layout_height="match_parent">
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
-
     <ImageView
         android:id="@+id/imgChart"
-        android:layout_width="300dp"
-        android:layout_height="209dp"
+        android:layout_width="351dp"
+        android:layout_height="284dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAwareness"
-        app:srcCompat="@drawable/Chart" />
+        app:srcCompat="@drawable/chart" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -46,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="260dp"
         android:layout_marginEnd="237dp"
         android:fontFamily="@font/lato"
         android:text="Full Name"
@@ -54,12 +41,12 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="132dp"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
@@ -117,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="41dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="34dp"
         android:layout_marginEnd="218dp"
         android:text="Awareness Tracker"
         android:textColor="#000000"
