@@ -29,9 +29,9 @@
             android:layout_width="261dp"
             android:layout_height="35dp"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="65dp"
-            android:fontFamily="@font/lato"
+            android:fontFamily="@font/lily_script_one"
             android:gravity="center_vertical|center"
             android:text="Security Purity Test"
             android:textColor="#FFFFFF"
@@ -53,6 +53,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pageTitle" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="144dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="145dp"
+            android:fontFamily="@font/lato_italic"
+            android:text="Tick all that apply to you"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTestDesc" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
