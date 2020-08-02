@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CyberSimFour">
+    tools:context=".CyberSimFive">
+
 
     <TextView
-        android:id="@+id/QuestionFourDescription"
+        android:id="@+id/QuestionFiveDescription"
         android:layout_width="181dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
@@ -17,31 +18,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/rightBtnFour"
+        android:id="@+id/rightBtnFive"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="152dp"
         android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/QuestionFourDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/QuestionFiveDescription" />
 
     <Button
-        android:id="@+id/wrongBtnFour"
+        android:id="@+id/wrongBtnFive"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/rightBtnFour"
-        app:layout_constraintTop_toBottomOf="@+id/rightBtnFour" />
+        app:layout_constraintStart_toStartOf="@+id/rightBtnFive"
+        app:layout_constraintTop_toBottomOf="@+id/rightBtnFive" />
 
     <TextView
-        android:id="@+id/fourScoreLbl"
+        android:id="@+id/fiveScoreLbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="168dp"
         android:layout_marginTop="48dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wrongBtnFour" />
+        app:layout_constraintTop_toBottomOf="@+id/wrongBtnFive" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

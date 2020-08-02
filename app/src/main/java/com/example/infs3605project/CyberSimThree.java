@@ -7,6 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 public class CyberSimThree extends AppCompatActivity {
 
     Button rightBtn, wrongBtn;
-    TextView description;
+    TextView description,score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,18 @@ public class CyberSimThree extends AppCompatActivity {
         description = findViewById(R.id.QuestionThreeDescription);
         rightBtn = findViewById(R.id.rightBtnThree);
         wrongBtn = findViewById(R.id.wrongBtnThree);
+        score = findViewById(R.id.threeScoreLbl);
 
         description.setText("Let’s take a look at the next email!");
+
+        //retrieve the score from the intent from CyberSimOne
+
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        final int scoreCount = extras.getInt("score");
+        Log.d("CSThree:", Integer.toString(scoreCount));
+        score.setText(Integer.toString(scoreCount));
+        //
 
         rightBtn.setText("Trash");
         wrongBtn.setText("Open");
@@ -37,7 +48,7 @@ public class CyberSimThree extends AppCompatActivity {
                 //open dialog feedback
                 openFeedbackDialog("Good work! You have successfully avoided a spear phishing " +
                         "& malware scam. The name of the attachment is not spelt correctly and file " +
-                        "size seems inaccurate - good work!", "#6EAE94");
+                        "size seems inaccurate - good work!", "#6EAE94", scoreCount+2500);
             }
         });
 
@@ -49,14 +60,14 @@ public class CyberSimThree extends AppCompatActivity {
                         "infected with malware. The next day, you realise that the scammers have accessed your files and " +
                         "deleted documents worth up to $2500 in value. The email sender's address is unfamiliar. The name of the " +
                         "attachment is not spelt correctly and file size seems inaccurate. Email encourages you to download " +
-                        "the attachment.", "#BF6F78");
+                        "the attachment.", "#BF6F78", scoreCount-2500);
             }
         });
 
 
     }
 
-    public void openFeedbackDialog(String desc, final String colour){
+    public void openFeedbackDialog(String desc, final String colour, final int score){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.dialog_feedback, null);
@@ -77,12 +88,10 @@ public class CyberSimThree extends AppCompatActivity {
         okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(colour.equals("#6EAE94")) { //right one
+                Intent intent = new Intent(CyberSimThree.this, CyberSimFour.class);
+                intent.putExtra("score", score);
+                startActivity(intent);
 
-
-                } else {
-                    startActivity(new Intent(getApplicationContext(), CyberSimFour.class));
-                }
             }
         });
 

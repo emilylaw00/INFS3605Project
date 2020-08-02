@@ -15,7 +15,8 @@ import android.widget.TextView;
 public class CyberSimOne extends AppCompatActivity {
 
     Button rightBtn, wrongBtn;
-    TextView description;
+    TextView description, score;
+
 
 
     @Override
@@ -26,17 +27,23 @@ public class CyberSimOne extends AppCompatActivity {
         description = findViewById(R.id.QuestionOneDescription);
         rightBtn = findViewById(R.id.rightBtn);
         wrongBtn = findViewById(R.id.wrongBtn);
-
+        score = findViewById(R.id.oneScoreLbl);
 
         description.setText("You open your work laptop and sign in. What do you do next?");
         rightBtn.setText("Take the time to connect to my VPN. It is likely to take a while to load. You get stressed about your large workload.");
         wrongBtn.setText("Instantly search for an internet connection and connect to it. Great! I can begin my work now.");
 
+        final int scoreCount = 5000;
+        score.setText(Integer.toString(scoreCount));
+
+
         rightBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //open dialog feedback
-                openDialog("By connecting to a VPN that TechStar trusts, I have ensured that my information is secure and encrypted, I can begin my work.", "#6EAE94");
+                openDialog("You have just connected securely to a WiFi connection through a VPN. " +
+                        "You are now ready to go. By connecting to a VPN that TechStar trusts, I have " +
+                        "ensured that my information is secure and encrypted, I can begin my work.", "#6EAE94", scoreCount+3500);
             }
         });
 
@@ -44,13 +51,15 @@ public class CyberSimOne extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //open dialog feedback
-                openDialog("By connecting to an insecure Wi-Fi, hackers are able to tamper with the connection and steal any confidential information. A VPN should be used to ensure that your information remains encrypted on public Wi-Fi. ", "#BF6F78");
+                openDialog("By connecting to an insecure Wi-Fi, hackers are able to tamper with" +
+                        " the connection and steal any confidential information. A VPN should be used " +
+                        "to ensure that your information remains encrypted on public Wi-Fi. ", "#BF6F78", scoreCount-3500);
             }
         });
 
     }
 
-    public void openDialog(String desc, final String colour){
+    public void openDialog(String desc, final String colour, final int currentScore){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.dialog_feedback, null);
@@ -71,12 +80,13 @@ public class CyberSimOne extends AppCompatActivity {
         okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(colour.equals("#6EAE94")) { //right one
-                    openDialogUpdate("You have just connected securely to a WiFi connection through a VPN. You are now ready to go");
-                    alertDialog.cancel();
-                } else {
-                    startActivity(new Intent(getApplicationContext(), CyberSimTwo.class));
-                }
+
+                    Intent intent = new Intent(CyberSimOne.this, CyberSimTwo.class);
+                    intent.putExtra("score", currentScore);
+                    startActivity(intent);
+
+
+
             }
         });
 
@@ -84,34 +94,7 @@ public class CyberSimOne extends AppCompatActivity {
 
     }
 
-    public void openDialogUpdate(String desc){
-        //method to call the dialog
-        LayoutInflater inflater = LayoutInflater.from(this);
-        View view = inflater.inflate(R.layout.dialog_feedback, null);
 
-        //initialise the elements
-        TextView descTxt = view.findViewById(R.id.dialogFeedbackDesc);
-        TextView lblTxt = view.findViewById(R.id.dialogFeedbackLbl);
-        Button okBtn = view.findViewById(R.id.DialogFeedbackBtn);
-
-        descTxt.setText(desc); //set the description
-        lblTxt.setText("SUCCESS!");
-
-        //create the dialog
-        final AlertDialog alertDialog = new AlertDialog.Builder(this)
-                .setView(view)
-                .create();
-
-        okBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), CyberSimTwo.class));
-            }
-        });
-
-        alertDialog.show();
-
-    }
 
 
 }

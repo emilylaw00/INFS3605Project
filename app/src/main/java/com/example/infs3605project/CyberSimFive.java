@@ -13,62 +13,61 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class CyberSimTwo extends AppCompatActivity {
+public class CyberSimFive extends AppCompatActivity {
 
-    Button rightBtn, wrongBtn;
+    Button trashBtn, openBtn;
     TextView description, score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cyber_sim_two);
+        setContentView(R.layout.activity_cyber_sim_five);
 
-        description = findViewById(R.id.QuestionTwoDescription);
-        rightBtn = findViewById(R.id.rightBtnTwo);
-        wrongBtn = findViewById(R.id.wrongBtnTwo);
-        score = findViewById(R.id.twoScoreLbl);
+        description = findViewById(R.id.QuestionFiveDescription);
+        trashBtn = findViewById(R.id.rightBtnFive);
+        openBtn = findViewById(R.id.wrongBtnFive);
+        score = findViewById(R.id.fiveScoreLbl);
+
+        description.setText("What do you do?");
 
         //retrieve the score from the intent from CyberSimOne
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         final int scoreCount = extras.getInt("score");
-        Log.d("CSTwo:", Integer.toString(scoreCount));
         score.setText(Integer.toString(scoreCount));
+        Log.d("CSThree:", Integer.toString(scoreCount));
+
         //
 
-        openDialog("Your senior manager has delivered a proposal form containing sensitive " +
-                "client information for you to download in your email.You open your email and you " +
-                "realise you have to sort through a lot of emails first.");
+        openDialog("You have successfully created your account on TechStar Messenger and your Large Latte finally arrives.");
 
-        description.setText("Looking at the first one, you decide to either open or trash it.");
+        trashBtn.setText("Quickly leave the seat to get your coffee! It’ll be less than a minute so it doesn’t matter too much if I leave my belongings unattended.");
+        openBtn.setText("Log out of TechStar Messenger, disconnect from my VPN and WiFi, and take my belongings with me before enjoying my cup of coffee. ");
 
-        rightBtn.setText("Trash");
-        wrongBtn.setText("Open");
-
-        rightBtn.setOnClickListener(new View.OnClickListener() {
+        openBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //open dialog feedback
-                openFeedbackDialog("Good work! You have successfully avoided a phishing scam.", "#6EAE94", scoreCount+2000);
+                openFeedbackDialog("By securing your belongings, you save the risk of having your " +
+                        "belongings containing sensitive information within the hands of a stranger. +$5000", "#6EAE94");
             }
         });
 
-        wrongBtn.setOnClickListener(new View.OnClickListener() {
+        trashBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //open dialog feedback
-                openFeedbackDialog("You enter your personal details and realise that you have " +
-                        "$2000 withdrawn from your bank account the next day. The sender's name is not" +
-                        " spelt correctly. the sender's address is not the same address as the official " +
-                        "Netflix's one. Receiver address is not your address. Netflix will never ask for" +
-                        " personal information through email.", "#BF6F78",scoreCount-2000);
+                openFeedbackDialog("You turn around and see that someone has stolen your " +
+                        "laptop within the few seconds you left your seat. With your laptop costing " +
+                        "$1500 and sensitive company information worth over $3500, you have just lost " +
+                        "$5000 in total. ", "#BF6F78");
             }
         });
 
     }
 
-    public void openFeedbackDialog(String desc, final String colour, final int score){
+    public void openFeedbackDialog(String desc, final String colour){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.dialog_feedback, null);
@@ -89,9 +88,8 @@ public class CyberSimTwo extends AppCompatActivity {
         okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CyberSimTwo.this, CyberSimThree.class);
-                intent.putExtra("score", score);
-                startActivity(intent);
+                finish();
+                startActivity(new Intent(getApplicationContext(), CyberSimOutro.class));
             }
         });
 
@@ -120,17 +118,15 @@ public class CyberSimTwo extends AppCompatActivity {
         okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    alertDialog.cancel();
+
+                alertDialog.cancel();
 
 
-                }
+            }
 
         });
 
         alertDialog.show();
 
     }
-
-
-
 }

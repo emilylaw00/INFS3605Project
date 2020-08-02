@@ -33,4 +33,15 @@
         android:text="Button"
         app:layout_constraintStart_toStartOf="@+id/rightBtn"
         app:layout_constraintTop_toBottomOf="@+id/rightBtn" />
+
+    <TextView
+        android:id="@+id/oneScoreLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="48dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wrongBtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
