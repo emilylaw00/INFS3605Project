@@ -1,5 +1,6 @@
 package com.example.infs3605project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ public class ProfileFragment extends Fragment {
 
     TextView mUserName, mUserScore, textV;
     ImageView mProfilePic;
+    Button mLogoutBtn;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -41,6 +43,7 @@ public class ProfileFragment extends Fragment {
         mUserScore = v.findViewById(R.id.txtScore);
         mProfilePic = v.findViewById(R.id.profilePic);
         //textV = v.findViewById(R.id.textView);
+        mLogoutBtn = v.findViewById(R.id.logoutBtn);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -68,7 +71,19 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        //logout button
+        mLogoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getContext(),Login.class));
+                getActivity().finish();
+            }
+        });
+
 
         return v;
     }
+
+
 }

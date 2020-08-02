@@ -76,12 +76,9 @@ public class CyberSimFour extends AppCompatActivity {
         okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(colour.equals("#6EAE94")) { //right one
 
-                    startActivity(new Intent(getApplicationContext(), CyberSimPassword.class));
-                } else {
-                    startActivity(new Intent(getApplicationContext(), CyberSimPassword.class));
-                }
+                startActivity(new Intent(getApplicationContext(), CyberSimPassword.class));
+
             }
         });
 

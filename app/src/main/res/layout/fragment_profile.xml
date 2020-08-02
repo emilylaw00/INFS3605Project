@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/imgChart"
-        android:layout_width="351dp"
-        android:layout_height="284dp"
+        android:layout_width="324dp"
+        android:layout_height="255dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,5 +112,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtScore" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="64dp"
+        android:text="log out"
+        app:layout_constraintStart_toEndOf="@+id/txtFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

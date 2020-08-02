@@ -10,19 +10,9 @@
         tools:layout_editor_absoluteX="-116dp"
         tools:layout_editor_absoluteY="38dp" />
 
-    ]]>
 
-    <Button
-        android:id="@+id/logoutBtn"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/btncolor"
-        android:onClick="logoutBtn"
-        android:text="Logout"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    ]]>
 
     <FrameLayout
         android:id="@+id/fragment_containter"
@@ -31,7 +21,7 @@
         android:layout_above="@+id/bottom_navigation"
         android:layout_marginEnd="3dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

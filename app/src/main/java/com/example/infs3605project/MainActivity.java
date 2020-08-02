@@ -15,9 +15,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    Button profileBtn, purityTestBtn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,16 +59,6 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             };
-
-    //logout button
-    public void logoutBtn(View view){
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(),Login.class));
-        finish();
-    }
-
-
-
 
 
 
