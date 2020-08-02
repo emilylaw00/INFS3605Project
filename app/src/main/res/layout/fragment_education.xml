@@ -33,31 +33,18 @@
 
     <Button
         android:id="@+id/purityTestBtn"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="151dp"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="110dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="81dp"
         android:background="@drawable/btncolor"
         android:text="purity test"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/simBtn" />
-
-    <Button
-        android:id="@+id/simBtn"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="256dp"
-        android:layout_marginEnd="137dp"
-        android:background="@drawable/btncolor"
-        android:text="sims"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backdrop" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -76,8 +63,45 @@
         android:layout_marginStart="65dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/lato"
-        android:text="TextView"
+        android:text="ChaChing"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gameName" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="22dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintEnd_toStartOf="@+id/txtGameMoney"
+        app:layout_constraintTop_toBottomOf="@+id/gameName"
+        app:srcCompat="@drawable/money" />
+
+    <Button
+        android:id="@+id/simBtn"
+        android:layout_width="299dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="137dp"
+        android:background="@drawable/bglightblue"
+        android:text="Lvl 1 - CyberSims"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backdrop" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="330dp"
+        android:layout_height="279dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backdrop"
+        app:srcCompat="@drawable/thumbnail" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
