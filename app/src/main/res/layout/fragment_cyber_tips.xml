@@ -22,7 +22,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cybertipstitle" />
 
     <TextView
-        android:id="@+id/txtCyberTip"
+        android:id="@+id/bg"
         android:layout_width="268dp"
         android:layout_height="46dp"
         android:layout_marginStart="131dp"

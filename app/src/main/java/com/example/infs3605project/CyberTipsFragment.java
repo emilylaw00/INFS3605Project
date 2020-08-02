@@ -31,7 +31,7 @@ public class CyberTipsFragment extends Fragment {
 
         tips = new String[] {"Stick to HTTPs Websites", "Be careful of what you share online", "Do not forget to log out and shut down", "Keep an eye on your devices in public areas", "Regularly back-up your computer", "Be cautious of storing passwords in browsers", "Avoid pop-ups, unknown emails and links", "Use strong password and two factor authentication", "Connect to secure wifi", "Keep up to date with Cyber-Security trends"};
         tipsPictures = new int[] {R.drawable.https1, R.drawable.privacy2, R.drawable. switch3, R.drawable.supervised4, R.drawable.backup5, R.drawable.password6, R.drawable.phishing7, R.drawable.authentication8, R.drawable.internet9, R.drawable.newspaper10};
-        tip = v.findViewById(R.id.txtCyberTip);
+        tip = v.findViewById(R.id.bg);
         picture = v.findViewById(R.id.picture);
         generate = v.findViewById(R.id.btnGenerate);
 
