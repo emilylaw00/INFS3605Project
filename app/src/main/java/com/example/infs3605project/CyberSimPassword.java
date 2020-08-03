@@ -27,7 +27,7 @@ public class CyberSimPassword extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         final int scoreCount = extras.getInt("score");
-        score.setText(Integer.toString(scoreCount));
+
         Log.d("CSThree:", Integer.toString(scoreCount));
 
         //
@@ -35,6 +35,8 @@ public class CyberSimPassword extends AppCompatActivity {
         score = findViewById(R.id.passwordScoreLbl);
         submitBtn = findViewById(R.id.submitBtn);
         cyberSimPassword = findViewById(R.id.passwordChecker);
+
+        score.setText(Integer.toString(scoreCount));
 
         submitBtn.setOnClickListener(new View.OnClickListener(){
             @Override
