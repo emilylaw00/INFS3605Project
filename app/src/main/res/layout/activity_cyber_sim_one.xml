@@ -6,42 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".CyberSimOne">
 
-    <TextView
-        android:id="@+id/QuestionOneDescription"
-        android:layout_width="181dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="108dp"
-        android:text="TextView"
+    <Button
+        android:id="@+id/wrongBtn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btnlightblu"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/rightBtn" />
 
     <Button
         android:id="@+id/rightBtn"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="152dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/btnlightblu"
         android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/QuestionOneDescription" />
-
-    <Button
-        android:id="@+id/wrongBtn"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/rightBtn"
-        app:layout_constraintTop_toBottomOf="@+id/rightBtn" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/oneScoreLbl"
+        android:layout_width="116dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/topflap"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center_vertical|center"
+        android:text="$xxx"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.964"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="48dp"
-        android:text="TextView"
+        android:layout_marginTop="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wrongBtn" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backtext" />
+
+    <TextView
+        android:id="@+id/QuestionOneDescription"
+        android:layout_width="295dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="344dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="This is the question the user will read."
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
