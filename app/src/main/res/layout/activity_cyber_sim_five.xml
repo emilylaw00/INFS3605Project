@@ -7,43 +7,69 @@
     tools:context=".CyberSimFive">
 
 
+    <ImageView
+        android:id="@+id/backkkk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="252dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backtext" />
+
     <TextView
         android:id="@+id/QuestionFiveDescription"
-        android:layout_width="181dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="108dp"
+        android:layout_width="296dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="344dp"
+        android:fontFamily="@font/lato_bold"
         android:text="TextView"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/rightBtnFive"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="152dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btnlightblu"
+        android:fontFamily="@font/lato"
         android:text="Button"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/QuestionFiveDescription" />
 
     <Button
         android:id="@+id/wrongBtnFive"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btnlightblu"
+        android:fontFamily="@font/lato"
         android:text="Button"
+        android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="@+id/rightBtnFive"
         app:layout_constraintTop_toBottomOf="@+id/rightBtnFive" />
 
     <TextView
         android:id="@+id/fiveScoreLbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="48dp"
-        android:text="TextView"
+        android:layout_width="116dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/topflap"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center_vertical|center"
+        android:text="xxx"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.964"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wrongBtnFive" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 
