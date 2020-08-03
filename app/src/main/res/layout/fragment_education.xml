@@ -31,21 +31,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/backdrop" />
 
-    <Button
-        android:id="@+id/purityTestBtn"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="81dp"
-        android:background="@drawable/btncolor"
-        android:text="purity test"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simBtn" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="68dp"
@@ -86,12 +71,29 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="137dp"
         android:alpha="0.00"
+        android:background="@android:color/transparent"
         android:text="Lvl 1 - CyberSims"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backdrop" />
+
+    <Button
+        android:id="@+id/purityTestBtn"
+        android:layout_width="223dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="45dp"
+        android:background="@android:color/transparent"
+        android:text="Security Purity Test"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simBtn" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -101,15 +103,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backdrop"
-        app:srcCompat="@drawable/bglightblue" />
+        app:srcCompat="@drawable/bgblue" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="449dp"
+        android:layout_marginTop="445dp"
         android:text="Lvl 1 - Phising Emails"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.309"
@@ -123,7 +125,7 @@
         android:layout_marginTop="4dp"
         android:fontFamily="@font/lato_italic"
         android:text="- How to spot phishing emails"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.393"
         app:layout_constraintStart_toStartOf="parent"
@@ -135,20 +137,42 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato_italic"
         android:text="- How to make an effective password"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="267dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="51dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simBtn"
+        app:srcCompat="@drawable/btncolor" />
+
+    <ImageView
         android:id="@+id/imageView10"
         android:layout_width="299dp"
         android:layout_height="242dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backdrop"
         app:srcCompat="@drawable/thumbnail1" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="29dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simBtn"
+        app:srcCompat="@drawable/test" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
