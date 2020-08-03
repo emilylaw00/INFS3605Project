@@ -10,7 +10,7 @@
         android:id="@+id/backk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="400dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,41 +20,40 @@
     <TextView
         android:id="@+id/QuestionTwoDescription"
         android:layout_width="296dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="344dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="500dp"
         android:fontFamily="@font/lato_bold"
         android:text="This is the first email opening."
         android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/rightBtnTwo"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/btnlightblu"
+        android:layout_width="19dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="15dp"
+        android:alpha="0.5"
+        android:background="@drawable/bin"
         android:fontFamily="@font/lato"
-        android:text="Button"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/QuestionTwoDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/twoScoreLbl" />
 
     <Button
         android:id="@+id/wrongBtnTwo"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/btnlightblu"
+        android:layout_width="79dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="357dp"
+        android:background="@android:color/transparent"
         android:fontFamily="@font/lato"
-        android:text="Button"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rightBtnTwo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/twoScoreLbl"
@@ -71,5 +70,17 @@
         app:layout_constraintHorizontal_bias="0.964"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="412dp"
+        android:layout_height="540dp"
+        app:layout_constraintBottom_toTopOf="@+id/backk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157"
+        app:srcCompat="@drawable/emaill" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

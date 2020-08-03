@@ -38,13 +38,14 @@ public class CyberSimTwo extends AppCompatActivity {
         //
 
         openDialog("Your senior manager has delivered a proposal form containing sensitive " +
-                "client information for you to download in your email.You open your email and you " +
+                "client information for you to download in your email. You open your email and you " +
                 "realise you have to sort through a lot of emails first.");
 
-        description.setText("Looking at the first one, you decide to either open or trash it.");
+        description.setText("Looking at the first one, you decide to either open or trash it. \n \n" +
+                "Click on either the \"Retry Payment\" or bin button.");
 
-        rightBtn.setText("Trash");
-        wrongBtn.setText("Open");
+//        rightBtn.setText("Trash");
+//        wrongBtn.setText("Open");
 
         rightBtn.setOnClickListener(new View.OnClickListener() {
             @Override

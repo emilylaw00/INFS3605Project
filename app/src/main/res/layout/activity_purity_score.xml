@@ -28,10 +28,10 @@
         android:layout_marginStart="148dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="149dp"
-        android:fontFamily="@font/lato"
+        android:fontFamily="@font/lato_bold"
         android:text="xx"
         android:textColor="@color/blue"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />

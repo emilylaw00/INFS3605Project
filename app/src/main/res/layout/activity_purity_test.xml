@@ -26,8 +26,8 @@
 
         <TextView
             android:id="@+id/pageTitle"
-            android:layout_width="261dp"
-            android:layout_height="35dp"
+            android:layout_width="255dp"
+            android:layout_height="43dp"
             android:layout_marginStart="28dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="65dp"
@@ -35,7 +35,7 @@
             android:gravity="center_vertical|center"
             android:text="Security Purity Test"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.473"
             app:layout_constraintStart_toEndOf="@+id/homeBtn"
@@ -56,15 +56,14 @@
 
         <TextView
             android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="16dp"
             android:layout_marginStart="144dp"
-            android:layout_marginTop="5dp"
             android:layout_marginEnd="145dp"
             android:fontFamily="@font/lato_italic"
             android:text="Tick all that apply to you"
             android:textColor="#FFFFFF"
-            android:textSize="12sp"
+            android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtTestDesc" />
