@@ -103,32 +103,18 @@
         app:layout_constraintTop_toBottomOf="@+id/backdrop"
         app:srcCompat="@drawable/bglightblue" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="299dp"
-        android:layout_height="263dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="34dp"
-        android:radius="1000dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backdrop"
-        app:srcCompat="@drawable/thumbnail" />
-
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="449dp"
         android:text="Lvl 1 - Phising Emails"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.309"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toTopOf="@+id/backdrop" />
 
     <TextView
         android:id="@+id/textView17"
