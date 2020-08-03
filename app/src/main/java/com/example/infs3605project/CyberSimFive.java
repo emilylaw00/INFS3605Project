@@ -34,7 +34,7 @@ public class CyberSimFive extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        int scoreCount = extras.getInt("score");
+        final int scoreCount = extras.getInt("score");
         score.setText(Integer.toString(scoreCount));
         Log.d("CSFive:", Integer.toString(scoreCount));
 
@@ -50,7 +50,7 @@ public class CyberSimFive extends AppCompatActivity {
             public void onClick(View v) {
                 //open dialog feedback
                 openFeedbackDialog("By securing your belongings, you save the risk of having your " +
-                        "belongings containing sensitive information within the hands of a stranger. +$5000", "#6EAE94");
+                        "belongings containing sensitive information within the hands of a stranger. +$5000", "#6EAE94", scoreCount+5000);
             }
         });
 
@@ -61,13 +61,13 @@ public class CyberSimFive extends AppCompatActivity {
                 openFeedbackDialog("You turn around and see that someone has stolen your " +
                         "laptop within the few seconds you left your seat. With your laptop costing " +
                         "$1500 and sensitive company information worth over $3500, you have just lost " +
-                        "$5000 in total. ", "#BF6F78");
+                        "$5000 in total. ", "#BF6F78", scoreCount-5000);
             }
         });
 
     }
 
-    public void openFeedbackDialog(String desc, final String colour){
+    public void openFeedbackDialog(String desc, final String colour, final int score){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.dialog_feedback, null);
@@ -89,7 +89,9 @@ public class CyberSimFive extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                startActivity(new Intent(getApplicationContext(), CyberSimOutro.class));
+                Intent intent = new Intent(CyberSimFive.this, CyberSimOutro.class);
+                intent.putExtra("score", score);
+                startActivity(intent);
             }
         });
 
