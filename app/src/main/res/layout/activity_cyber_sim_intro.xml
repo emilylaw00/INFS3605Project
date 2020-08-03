@@ -7,18 +7,6 @@
     tools:context=".CyberSimIntro">
 
     <ImageView
-        android:id="@+id/pageImage"
-        android:layout_width="409dp"
-        android:layout_height="220dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/pageDescription"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/aa" />
-
-    <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,5 +47,13 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/pageimage"
+        android:layout_width="319dp"
+        android:layout_height="254dp"
+        app:srcCompat="@drawable/aa"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="37dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
