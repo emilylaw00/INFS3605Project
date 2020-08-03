@@ -109,13 +109,13 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="158dp"
         android:fontFamily="@font/lato_bold"
         android:text="CyberSims"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.332"
+        app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/simBtn" />
 
@@ -129,7 +129,7 @@
         android:textColor="#FFFFFF"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -142,7 +142,7 @@
         android:textColor="#FFFFFF"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.575"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -210,5 +210,15 @@
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="40dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="161dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/simBtn"
+        app:srcCompat="@drawable/welldone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

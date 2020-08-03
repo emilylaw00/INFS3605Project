@@ -70,6 +70,7 @@
         android:layout_marginEnd="257dp"
         android:fontFamily="@font/lato"
         android:text="Joined June 2020"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
@@ -78,22 +79,21 @@
         android:id="@+id/txtMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginEnd="312dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
         android:fontFamily="@font/lato"
         android:text="Money"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtJoin" />
+        app:layout_constraintTop_toBottomOf="@+id/backpiece" />
 
     <TextView
         android:id="@+id/txtAwareness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="200dp"
         android:fontFamily="@font/lato_bold"
         android:text="Awareness Tracker"
@@ -101,7 +101,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtScore" />
+        app:layout_constraintTop_toBottomOf="@+id/txtJoin" />
 
     <Button
         android:id="@+id/logoutBtn"
@@ -119,15 +119,57 @@
 
     <TextView
         android:id="@+id/txtScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginEnd="334dp"
+        android:layout_width="51dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="35dp"
         android:fontFamily="@font/lato"
         android:text="xxx"
         android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
         app:layout_constraintTop_toBottomOf="@+id/txtMoney" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/txtMoney"
+        app:layout_constraintTop_toBottomOf="@+id/backpiece"
+        app:srcCompat="@drawable/money" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="94dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:srcCompat="@drawable/test" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtJoin"
+        app:srcCompat="@drawable/welldone" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="13dp"
+        android:text="Completed CyberSims"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:layout_constraintTop_toBottomOf="@+id/txtJoin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
