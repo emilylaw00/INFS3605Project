@@ -34,7 +34,7 @@ public class CyberSimFive extends AppCompatActivity {
 
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        final int scoreCount = extras.getInt("score");
+        int scoreCount = extras.getInt("score");
         score.setText(Integer.toString(scoreCount));
         Log.d("CSFive:", Integer.toString(scoreCount));
 

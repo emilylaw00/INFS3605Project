@@ -43,22 +43,58 @@ public class CyberSimPassword extends AppCompatActivity {
             public void onClick(View v) {
                 String password = cyberSimPassword.getText().toString().trim();
 
+
+                boolean atleastOneAlpha = password.matches(".*[a-zA-Z]+.*");
+                if (!atleastOneAlpha) {
+                    cyberSimPassword.setError("Password must contain at least one alphabetic character.");
+
+                    return;
+                }
+
+
                 if (TextUtils.isEmpty(password)) {
                     cyberSimPassword.setError("Password is required.");
+
                     return;
                 }
 
-                if (password.length() < 6) {
+                //length
+                if (password.length() < 8) {
                     cyberSimPassword.setError("Password must be => 8 characters");
+
                     return;
                 }
 
+                //contain digits
                 if(!findDigit(password)) {
-                    cyberSimPassword.setError("Password must contain digits characters");
-                    return;
+                    cyberSimPassword.setError("Password must contain at least one numeric character");
+
+                    return ;
                 }
 
-                startActivity(new Intent(getApplicationContext(), CyberSimFive.class));
+                //upper and lower case
+                if(!checkCasing(password)) {
+                    cyberSimPassword.setError("Password must contain both upper and lower case letters");
+
+                    return ;
+                }
+
+                //special character
+                if(!checkSpecialCharacter(password)) {
+                    cyberSimPassword.setError("Password must contain at least one special character");
+
+                    return ;
+                }
+
+
+
+
+
+                finish();
+                Intent intent = new Intent(CyberSimPassword.this, CyberSimFive.class);
+                intent.putExtra("score", scoreCount);
+
+                startActivity(intent);
 
             }
 
@@ -80,6 +116,39 @@ public class CyberSimPassword extends AppCompatActivity {
 
         return false;
     }
+
+    public boolean checkCasing(String str) {
+        char ch;
+        boolean hasUpperCase = false;
+        boolean hasLowerCase = false;
+        for(int i=0;i < str.length();i++) {
+            ch = str.charAt(i);
+            if (Character.isUpperCase(ch)) {
+                hasUpperCase = true;
+            } else if (Character.isLowerCase(ch)) {
+                hasLowerCase = true;
+            }
+            if(hasUpperCase && hasLowerCase)
+                return true;
+        }
+        return false;
+    }
+
+    public boolean checkSpecialCharacter(String str) {
+        String specialCharactersString = "!@#$%&*()'+,-./:;<=>?[]^_`{|}";
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (specialCharactersString.contains(Character.toString(ch))) {
+                return true;
+            } else if (i == str.length() - 1)
+                return false;
+        }
+        return false;
+    }
+
+
+
+
 
 
 
