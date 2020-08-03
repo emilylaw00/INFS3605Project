@@ -8,50 +8,49 @@
     android:layout_height="match_parent">
 
 
+    <TextView
+        android:id="@+id/backpiece"
+        android:layout_width="411dp"
+        android:layout_height="105dp"
+        android:background="@drawable/topflap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imgChart"
-        android:layout_width="324dp"
-        android:layout_height="255dp"
+        android:layout_width="316dp"
+        android:layout_height="212dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAwareness"
         app:srcCompat="@drawable/chart" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="410dp"
-        android:layout_height="193dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/topflap" />
 
     <TextView
         android:id="@+id/txtFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="237dp"
         android:fontFamily="@font/lato"
+        android:gravity="left"
         android:text="Full Name"
         android:textColor="#000000"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
+        android:layout_width="99dp"
+        android:layout_height="111dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="132dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
-        app:srcCompat="@drawable/circle" />
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profilepic" />
 
     <Button
         android:id="@+id/btnEdit"
@@ -61,15 +60,15 @@
         android:layout_marginEnd="16dp"
         android:background="@drawable/ic_baseline_edit_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtJoin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginStart="39dp"
         android:layout_marginEnd="257dp"
+        android:fontFamily="@font/lato"
         android:text="Joined June 2020"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,33 +78,24 @@
         android:id="@+id/txtMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginStart="55dp"
         android:layout_marginEnd="312dp"
+        android:fontFamily="@font/lato"
         android:text="Money"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtJoin" />
-
-    <TextView
-        android:id="@+id/txtScore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="228dp"
-        android:text="Current Purity Score"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtMoney" />
 
     <TextView
         android:id="@+id/txtAwareness"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="218dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="200dp"
+        android:fontFamily="@font/lato_bold"
         android:text="Awareness Tracker"
         android:textColor="#000000"
         android:textSize="18sp"
@@ -117,10 +107,24 @@
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/btnlightblu"
         android:text="log out"
-        app:layout_constraintStart_toEndOf="@+id/txtFirstName"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintEnd_toStartOf="@+id/btnEdit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="334dp"
+        android:fontFamily="@font/lato"
+        android:text="xxx"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMoney" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
