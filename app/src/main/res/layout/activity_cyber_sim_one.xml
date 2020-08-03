@@ -32,6 +32,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/QuestionOneDescription" />
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="491dp"
+        android:layout_height="298dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bb" />
+
     <TextView
         android:id="@+id/oneScoreLbl"
         android:layout_width="116dp"
@@ -47,15 +56,6 @@
         app:layout_constraintHorizontal_bias="0.964"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="460dp"
-        android:layout_height="256dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oneScoreLbl"
-        app:srcCompat="@drawable/bb" />
 
     <ImageView
         android:id="@+id/backk"
