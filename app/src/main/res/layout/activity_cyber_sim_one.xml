@@ -9,10 +9,12 @@
     <Button
         android:id="@+id/wrongBtn"
         android:layout_width="300dp"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/btnlightblu"
+        android:fontFamily="@font/lato"
         android:text="Button"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rightBtn" />
@@ -20,13 +22,15 @@
     <Button
         android:id="@+id/rightBtn"
         android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="400dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btnlightblu"
+        android:fontFamily="@font/lato"
         android:text="Button"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/QuestionOneDescription" />
 
     <TextView
         android:id="@+id/oneScoreLbl"
@@ -37,7 +41,7 @@
         android:background="@drawable/topflap"
         android:fontFamily="@font/lato_bold"
         android:gravity="center_vertical|center"
-        android:text="$xxx"
+        android:text="xxx"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.964"
@@ -57,8 +61,8 @@
 
     <TextView
         android:id="@+id/QuestionOneDescription"
-        android:layout_width="295dp"
-        android:layout_height="27dp"
+        android:layout_width="293dp"
+        android:layout_height="55dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="344dp"
         android:fontFamily="@font/lato_bold"

@@ -33,6 +33,7 @@ public class CyberSimOne extends AppCompatActivity {
         rightBtn.setText("Take the time to connect to my VPN. It is likely to take a while to load. You get stressed about your large workload.");
         wrongBtn.setText("Instantly search for an internet connection and connect to it. Great! I can begin my work now.");
 
+        //Integer.parseInt("$")? I couldn't get it :(
         final int scoreCount = 5000;
         score.setText(Integer.toString(scoreCount));
 
