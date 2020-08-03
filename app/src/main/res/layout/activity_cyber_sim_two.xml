@@ -21,11 +21,11 @@
         android:id="@+id/QuestionTwoDescription"
         android:layout_width="296dp"
         android:layout_height="100dp"
-        android:layout_marginStart="56dp"
         android:layout_marginTop="500dp"
         android:fontFamily="@font/lato_bold"
         android:text="This is the first email opening."
         android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
