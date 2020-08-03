@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/feedbackDialogBg"
     android:layout_width="match_parent"
-    android:layout_height="400dp">
+    android:layout_height="400dp"
+    android:background="@drawable/bglightblue">
 
     <Button
         android:id="@+id/DialogFeedbackBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@color/blue"
+        android:background="@drawable/roundbutton"
         android:text="NEXT"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="@+id/dialogFeedbackDesc"
         app:layout_constraintStart_toStartOf="@+id/dialogFeedbackDesc"
         app:layout_constraintTop_toBottomOf="@+id/dialogFeedbackDesc" />
@@ -23,10 +24,12 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:fontFamily="@font/lato"
         android:gravity="center"
         android:text="badge_description"
-        android:textColor="#3F51B5"
-        android:textSize="18sp"
+        android:textAlignment="gravity"
+        android:textColor="#000000"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/dialogFeedbackLbl"
         app:layout_constraintStart_toStartOf="@+id/dialogFeedbackLbl"
         app:layout_constraintTop_toBottomOf="@+id/dialogFeedbackLbl" />
@@ -36,8 +39,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:fontFamily="@font/lato_bold"
         android:text="Choice feedback"
-        android:textColor="#3F51B5"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
