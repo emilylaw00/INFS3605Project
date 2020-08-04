@@ -12,9 +12,10 @@
         android:layout_height="80dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/btnlightblu"
-        android:fontFamily="@font/lato"
+        android:fontFamily="@font/lato_bold"
         android:text="Button"
         android:textAllCaps="false"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rightBtn" />
@@ -25,9 +26,10 @@
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btnlightblu"
-        android:fontFamily="@font/lato"
+        android:fontFamily="@font/lato_bold"
         android:text="Button"
         android:textAllCaps="false"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/QuestionOneDescription" />
@@ -71,12 +73,14 @@
     <TextView
         android:id="@+id/QuestionOneDescription"
         android:layout_width="296dp"
-        android:layout_height="40dp"
+        android:layout_height="54dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="344dp"
         android:fontFamily="@font/lato_bold"
         android:text="This is the question the user will read."
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

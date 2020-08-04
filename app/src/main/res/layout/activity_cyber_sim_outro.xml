@@ -30,7 +30,7 @@
         android:textColor="#000000"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
+        app:layout_constraintHorizontal_bias="0.604"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
@@ -81,7 +81,7 @@
         android:fontFamily="@font/lato"
         android:text="You have mastered CyberSims!"
         android:textColor="#000000"
-        android:textSize="23sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/outroLbl" />
@@ -103,8 +103,8 @@
     <ImageView
         android:id="@+id/imageView18"
         android:layout_width="179dp"
-        android:layout_height="173dp"
-        android:layout_marginTop="19dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView25"

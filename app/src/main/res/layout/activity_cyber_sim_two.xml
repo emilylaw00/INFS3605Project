@@ -20,11 +20,13 @@
     <TextView
         android:id="@+id/QuestionTwoDescription"
         android:layout_width="296dp"
-        android:layout_height="100dp"
+        android:layout_height="126dp"
         android:layout_marginTop="500dp"
         android:fontFamily="@font/lato_bold"
         android:text="This is the first email opening."
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

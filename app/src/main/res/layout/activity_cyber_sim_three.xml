@@ -24,7 +24,9 @@
         android:layout_marginTop="500dp"
         android:fontFamily="@font/lato_bold"
         android:text="This is the second email opening."
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

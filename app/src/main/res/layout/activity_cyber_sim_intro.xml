@@ -32,10 +32,11 @@
         android:layout_height="151dp"
         android:layout_marginStart="50dp"
         android:layout_marginTop="330dp"
+        android:gravity="center_horizontal"
         android:text="This is the scenario that the user will read."
         android:textAlignment="gravity"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/DialogFeedbackBtn"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/btnblack"
@@ -29,7 +29,7 @@
         android:text="badge_description"
         android:textAlignment="gravity"
         android:textColor="#FFFFFF"
-        android:textSize="14sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/dialogFeedbackLbl"
         app:layout_constraintStart_toStartOf="@+id/dialogFeedbackLbl"
         app:layout_constraintTop_toBottomOf="@+id/dialogFeedbackLbl" />
@@ -42,7 +42,7 @@
         android:fontFamily="@font/lato_bold"
         android:text="Choice Feedback"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
