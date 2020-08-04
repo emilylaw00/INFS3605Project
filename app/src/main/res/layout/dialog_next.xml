@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="@+id/dialogFeedbackDesc"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="@+id/dialogFeedbackDesc"
-        app:layout_constraintTop_toBottomOf="@+id/increment" />
+        app:layout_constraintTop_toBottomOf="@+id/dialogFeedbackDesc" />
 
     <TextView
         android:id="@+id/dialogFeedbackDesc"
@@ -68,17 +68,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dialogFeedbackLbl"
         app:srcCompat="@drawable/tickker" />
-
-    <TextView
-        android:id="@+id/increment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/lato_black"
-        android:text="finalscore"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialogFeedbackDesc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

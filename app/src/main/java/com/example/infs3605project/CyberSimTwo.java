@@ -52,7 +52,7 @@ public class CyberSimTwo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //open dialog feedback
-                openFeedbackDialog("Good work! You have successfully avoided a phishing scam.", R.drawable.tickker, "#49B342", scoreCount+2000);
+                openFeedbackDialog("Good work! You have successfully avoided a phishing scam.", "+$2000", R.drawable.tickker, "#49B342", scoreCount+2000);
             }
         });
 
@@ -64,13 +64,13 @@ public class CyberSimTwo extends AppCompatActivity {
                         "$2000 withdrawn from your bank account the next day. \n \n The sender's name is not" +
                         " spelt correctly. \n The sender's address is not the same address as the official " +
                         "Netflix's one. \n Receiver address is not your address. \n Netflix will never ask for" +
-                        " personal information through email.", R.drawable.close, "#D54335",scoreCount-2000);
+                        " personal information through email.", "-$2000", R.drawable.close, "#D54335",scoreCount-2000);
             }
         });
 
     }
 
-    public void openFeedbackDialog(String desc, int pictype, final String colour, final int score){
+    public void openFeedbackDialog(String desc, String increment, int pictype, final String colour, final int score){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.dialog_feedback, null);
@@ -78,12 +78,14 @@ public class CyberSimTwo extends AppCompatActivity {
 
         //initialise the elements
         TextView descTxt = view.findViewById(R.id.dialogFeedbackDesc);
+        TextView points = view.findViewById(R.id.increment);
         Button okBtn = view.findViewById(R.id.DialogFeedbackBtn);
         ConstraintLayout dialogBg = view.findViewById(R.id.feedbackDialogBg);
 
         descTxt.setText(desc); //set the description
         dialogBg.setBackgroundColor(Color.parseColor(colour));
         pic.setImageResource(pictype);
+        points.setText(increment);
 
         //create the dialog
         final AlertDialog alertDialog = new AlertDialog.Builder(this)
@@ -106,10 +108,11 @@ public class CyberSimTwo extends AppCompatActivity {
     public void openDialog(String desc, int pictype){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
-        View view = inflater.inflate(R.layout.dialog_feedback, null);
+        View view = inflater.inflate(R.layout.dialog_next, null);
 
         //initialise the elements
         TextView dialogLbl = view.findViewById(R.id.dialogFeedbackLbl);
+
         TextView descTxt = view.findViewById(R.id.dialogFeedbackDesc);
         Button okBtn = view.findViewById(R.id.DialogFeedbackBtn);
         ImageView pic = view.findViewById(R.id.icon);

@@ -33,8 +33,8 @@
 
     <TextView
         android:id="@+id/QuestionFiveDescription"
-        android:layout_width="298dp"
-        android:layout_height="63dp"
+        android:layout_width="297dp"
+        android:layout_height="23dp"
         android:layout_marginStart="56dp"
         android:layout_marginTop="344dp"
         android:fontFamily="@font/lato_bold"
@@ -48,12 +48,13 @@
     <Button
         android:id="@+id/rightBtnFive"
         android:layout_width="300dp"
-        android:layout_height="80dp"
+        android:layout_height="95dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btnlightblu"
-        android:fontFamily="@font/lato"
+        android:fontFamily="@font/lato_bold"
         android:text="Button"
         android:textAllCaps="false"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/QuestionFiveDescription" />
@@ -61,12 +62,13 @@
     <Button
         android:id="@+id/wrongBtnFive"
         android:layout_width="300dp"
-        android:layout_height="80dp"
+        android:layout_height="95dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/btnlightblu"
-        android:fontFamily="@font/lato"
+        android:fontFamily="@font/lato_bold"
         android:text="Button"
         android:textAllCaps="false"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/rightBtnFive"
         app:layout_constraintTop_toBottomOf="@+id/rightBtnFive" />
 

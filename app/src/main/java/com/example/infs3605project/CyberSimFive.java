@@ -41,7 +41,7 @@ public class CyberSimFive extends AppCompatActivity {
 
         //
 
-        openDialog("You have successfully created your account on TechStar Messenger and your Large Latte finally arrives.");
+        openDialog("You have successfully created your account on TechStar Messenger and your Large Latte finally arrives.", R.drawable.coffee);
 
         trashBtn.setText("Quickly leave the seat to get your coffee! It’ll be less than a minute so it doesn’t matter too much if I leave my belongings unattended.");
         openBtn.setText("Log out of TechStar Messenger, disconnect from my VPN and WiFi, and take my belongings with me before enjoying my cup of coffee. ");
@@ -51,7 +51,7 @@ public class CyberSimFive extends AppCompatActivity {
             public void onClick(View v) {
                 //open dialog feedback
                 openFeedbackDialog("By securing your belongings, you save the risk of having your " +
-                        "belongings containing sensitive information within the hands of a stranger. \n \n +$5000", R.drawable.tickker, "#49B342", scoreCount+5000);
+                        "belongings containing sensitive information within the hands of a stranger.", "+$5000", R.drawable.tickker, "#49B342", scoreCount+5000);
             }
         });
 
@@ -62,13 +62,13 @@ public class CyberSimFive extends AppCompatActivity {
                 openFeedbackDialog("You turn around and see that someone has stolen your " +
                         "laptop within the few seconds you left your seat. \n \n With your laptop costing " +
                         "$1500 and sensitive company information worth over $3500, you have just lost " +
-                        "$5000 in total. ", R.drawable.close, "#D54335", scoreCount-5000);
+                        "$5000 in total. ", "-$5000", R.drawable.close, "#D54335", scoreCount-5000);
             }
         });
 
     }
 
-    public void openFeedbackDialog(String desc, int pictype, final String colour, final int score){
+    public void openFeedbackDialog(String desc, String increment, int pictype, final String colour, final int score){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.dialog_feedback, null);
@@ -76,12 +76,14 @@ public class CyberSimFive extends AppCompatActivity {
         //initialise the elements
         TextView descTxt = view.findViewById(R.id.dialogFeedbackDesc);
         Button okBtn = view.findViewById(R.id.DialogFeedbackBtn);
+        TextView points = view.findViewById(R.id.increment);
         ConstraintLayout dialogBg = view.findViewById(R.id.feedbackDialogBg);
         ImageView pic = view.findViewById(R.id.icon);
 
         descTxt.setText(desc); //set the description
         dialogBg.setBackgroundColor(Color.parseColor(colour));
         pic.setImageResource(pictype);
+        points.setText(increment);
 
         //create the dialog
         final AlertDialog alertDialog = new AlertDialog.Builder(this)
@@ -102,18 +104,20 @@ public class CyberSimFive extends AppCompatActivity {
 
     }
 
-    public void openDialog(String desc){
+    public void openDialog(String desc, int pictype){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
-        View view = inflater.inflate(R.layout.dialog_feedback, null);
+        View view = inflater.inflate(R.layout.dialog_next, null);
 
         //initialise the elements
         TextView dialogLbl = view.findViewById(R.id.dialogFeedbackLbl);
         TextView descTxt = view.findViewById(R.id.dialogFeedbackDesc);
         Button okBtn = view.findViewById(R.id.DialogFeedbackBtn);
+        ImageView pic = view.findViewById(R.id.icon);
 
         descTxt.setText(desc); //set the description
         dialogLbl.setText("NEXT...");
+        pic.setImageResource(pictype);
 
         //create the dialog
         final AlertDialog alertDialog = new AlertDialog.Builder(this)

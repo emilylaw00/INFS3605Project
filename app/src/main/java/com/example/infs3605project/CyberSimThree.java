@@ -50,7 +50,7 @@ public class CyberSimThree extends AppCompatActivity {
                 //open dialog feedback
                 openFeedbackDialog("Good work! You have successfully avoided a spear phishing " +
                         "& malware scam. The name of the attachment is not spelt correctly and file " +
-                        "size seems inaccurate - good work!", R.drawable.tickker, "#49B342", scoreCount+2500);
+                        "size seems inaccurate - good work!", "+$2500", R.drawable.tickker, "#49B342", scoreCount+2500);
             }
         });
 
@@ -62,20 +62,21 @@ public class CyberSimThree extends AppCompatActivity {
                         "infected with malware. The next day, you realise that the scammers have accessed your files and " +
                         "deleted documents worth up to $2500 in value. \n \n The email sender's address is unfamiliar. \n The name of the " +
                         "attachment is not spelt correctly and file size seems inaccurate. \n Email encourages you to download " +
-                        "the attachment.", R.drawable.close,"#D54335", scoreCount-2500);
+                        "the attachment.", "-$2500",R.drawable.close, "#D54335", scoreCount-2500);
             }
         });
 
 
     }
 
-    public void openFeedbackDialog(String desc, int pictype, final String colour, final int score){
+    public void openFeedbackDialog(String desc, String increment, int pictype, final String colour, final int score){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.dialog_feedback, null);
 
         //initialise the elements
         TextView descTxt = view.findViewById(R.id.dialogFeedbackDesc);
+        TextView points = view.findViewById(R.id.increment);
         Button okBtn = view.findViewById(R.id.DialogFeedbackBtn);
         ConstraintLayout dialogBg = view.findViewById(R.id.feedbackDialogBg);
         ImageView pic = view.findViewById(R.id.icon);
@@ -83,6 +84,7 @@ public class CyberSimThree extends AppCompatActivity {
         descTxt.setText(desc); //set the description
         dialogBg.setBackgroundColor(Color.parseColor(colour));
         pic.setImageResource(pictype);
+        points.setText(increment);
 
         //create the dialog
         final AlertDialog alertDialog = new AlertDialog.Builder(this)
