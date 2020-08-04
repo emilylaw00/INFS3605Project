@@ -73,7 +73,7 @@
     <TextView
         android:id="@+id/QuestionOneDescription"
         android:layout_width="296dp"
-        android:layout_height="54dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="344dp"
         android:fontFamily="@font/lato_bold"

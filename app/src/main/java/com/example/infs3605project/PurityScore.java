@@ -25,6 +25,7 @@ public class PurityScore extends AppCompatActivity {
     private TextView mScore, mFeedback;
     private Button finishBtn;
     private ConstraintLayout scoreBg;
+    private ImageView picture;
 
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -41,6 +42,7 @@ public class PurityScore extends AppCompatActivity {
         mFeedback = findViewById(R.id.feedbackTxt);
         finishBtn = findViewById(R.id.finishBtn);
         scoreBg = findViewById(R.id.scoreBackground);
+        picture = findViewById(R.id.feedbackicon);
 
         //retrieve the stored score
 
@@ -61,13 +63,21 @@ public class PurityScore extends AppCompatActivity {
                 mScore.setText(score);
                 int scoreNo = Integer.parseInt(score);
                 if(scoreNo <= 5) {
-                    mFeedback.setText("That is soooooo bad");
+                    mFeedback.setText("You are extremely vulnerable to cyber threats. You have little-to-no Cybersecurity awareness and your actions can " +
+                            "seriously harm the people around you or the organisation you are applying for. ");
+                    picture.setImageResource(R.drawable.red);
                 } else if (scoreNo < 10 && scoreNo > 5){
-                    mFeedback.setText("That is not too bad");
+                    mFeedback.setText("You are highly vulnerable to cyber threats and your Cybersecurity awareness is low. " +
+                            "If you do not focus on fixing these bad habits, it will negatively affect your personal life. ");
+                    picture.setImageResource(R.drawable.orange1);
                 } else if (scoreNo >= 10 && scoreNo < 15){
-                    mFeedback.setText("It is a decent score but there is definitely lots of area for improvement");
+                    mFeedback.setText("You are at medium risk to cyber threats and your Cybersecurity awareness is average. " +
+                            "Try and remind yourself to fix some of these bad habits before these threats escalate.");
+                    picture.setImageResource(R.drawable.yellow);
                 } else if (scoreNo >= 15){
-                    mFeedback.setText("You are absolutely so very safe! Well done");
+                    mFeedback.setText("You are at low risk to cyber threats and your Cybersecurity awareness is high. " +
+                            "Continue reading on industry news to look out for potential emerging threats.");
+                    picture.setImageResource(R.drawable.green);
                 }
             }
         });

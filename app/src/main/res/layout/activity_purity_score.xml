@@ -29,6 +29,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="149dp"
         android:fontFamily="@font/lato_bold"
+        android:gravity="center_vertical|center"
         android:text="xx"
         android:textColor="@color/blue"
         android:textSize="36sp"
@@ -41,29 +42,29 @@
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:fontFamily="@font/lato_bold"
         android:text="/20"
         android:textColor="@color/blue"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/scoreTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feedbackTxt" />
+        app:layout_constraintTop_toTopOf="@+id/scoreTxt" />
 
     <TextView
         android:id="@+id/feedbackTxt"
         android:layout_width="285dp"
-        android:layout_height="93dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="332dp"
-        android:fontFamily="@font/lato_bold"
-        android:gravity="center_vertical|center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal"
         android:text="Your feedback!"
-        android:textColor="@color/blue"
-        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/feedbackicon" />
 
     <TextView
         android:id="@+id/txtFeedback"
@@ -84,6 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="170dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="170dp"
         android:fontFamily="@font/lato"
         android:text="You scored:"
@@ -91,5 +93,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/feedbackTxt" />
+
+    <ImageView
+        android:id="@+id/feedbackicon"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFeedback"
+        app:srcCompat="@drawable/green" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
