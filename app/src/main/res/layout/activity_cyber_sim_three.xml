@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/QuestionThreeDescription"
-        android:layout_width="296dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="111dp"
         android:layout_marginTop="500dp"
         android:fontFamily="@font/lato_bold"
         android:text="This is the second email opening."

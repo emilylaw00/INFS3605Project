@@ -8,6 +8,19 @@
 
 
     <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="458dp"
+        android:layout_height="507dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/backkkk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.403"
+        app:srcCompat="@drawable/cafereadyy" />
+
+    <ImageView
         android:id="@+id/backkkk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +83,6 @@
         app:layout_constraintHorizontal_bias="0.964"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
