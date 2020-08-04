@@ -23,7 +23,7 @@
         android:id="@+id/dialogFeedbackDesc"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/lato"
         android:gravity="center"
         android:text="badge_description"
@@ -31,19 +31,22 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/dialogFeedbackLbl"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="@+id/dialogFeedbackLbl"
-        app:layout_constraintTop_toBottomOf="@+id/dialogFeedbackLbl" />
+        app:layout_constraintTop_toBottomOf="@+id/icon" />
 
     <TextView
         android:id="@+id/dialogFeedbackLbl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_width="415dp"
+        android:layout_height="72dp"
+        android:background="@drawable/blackflap"
         android:fontFamily="@font/lato_bold"
+        android:gravity="center_vertical|center"
         android:text="Choice Feedback"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,5 +57,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DialogFeedbackBtn" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogFeedbackLbl"
+        app:srcCompat="@drawable/tickker" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

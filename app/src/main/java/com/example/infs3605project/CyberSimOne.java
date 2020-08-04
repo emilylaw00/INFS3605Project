@@ -44,7 +44,7 @@ public class CyberSimOne extends AppCompatActivity {
                 //open dialog feedback
                 openDialog("You have just connected securely to a WiFi connection through a VPN. " +
                         "You are now ready to go. \n \n By connecting to a VPN that TechStar trusts, I have " +
-                        "ensured that my information is secure and encrypted, I can begin my work.", "#6EAE94", scoreCount+3500);
+                        "ensured that my information is secure and encrypted, I can begin my work.", "#43A53C", scoreCount+3500);
             }
         });
 
