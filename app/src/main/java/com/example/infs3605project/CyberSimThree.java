@@ -36,7 +36,7 @@ public class CyberSimThree extends AppCompatActivity {
         Bundle extras = intent.getExtras();
         final int scoreCount = extras.getInt("score");
         Log.d("CSThree:", Integer.toString(scoreCount));
-        score.setText(Integer.toString(scoreCount));
+        score.setText("$" + Integer.toString(scoreCount));
         //
 
         rightBtn.setText("Trash");

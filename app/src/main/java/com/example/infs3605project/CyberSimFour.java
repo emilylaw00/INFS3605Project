@@ -33,7 +33,7 @@ public class CyberSimFour extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         final int scoreCount = extras.getInt("score");
-        score.setText(Integer.toString(scoreCount));
+        score.setText("$" +Integer.toString(scoreCount));
         Log.d("CSFour:", Integer.toString(scoreCount));
 
         //

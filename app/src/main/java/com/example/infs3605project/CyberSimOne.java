@@ -35,7 +35,7 @@ public class CyberSimOne extends AppCompatActivity {
 
         //Integer.parseInt("$")? I couldn't get it :(
         final int scoreCount = 5000;
-        score.setText(Integer.toString(scoreCount));
+        score.setText("$" + Integer.toString(scoreCount));
 
 
         rightBtn.setOnClickListener(new View.OnClickListener() {

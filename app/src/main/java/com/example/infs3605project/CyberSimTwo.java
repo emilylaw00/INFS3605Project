@@ -34,7 +34,7 @@ public class CyberSimTwo extends AppCompatActivity {
         Bundle extras = intent.getExtras();
         final int scoreCount = extras.getInt("score");
         Log.d("CSTwo:", Integer.toString(scoreCount));
-        score.setText(Integer.toString(scoreCount));
+        score.setText("$" + Integer.toString(scoreCount));
         //
 
         openDialog("Your senior manager has delivered a proposal form containing sensitive " +
@@ -42,7 +42,7 @@ public class CyberSimTwo extends AppCompatActivity {
                 "realise you have to sort through a lot of emails first.");
 
         description.setText("Looking at the first one, you decide to either open or trash it. \n \n" +
-                "Click on either the \"Retry Payment\" or bin button.");
+                "Click on either the \"Retry Payment\" OR bin button.");
 
 //        rightBtn.setText("Trash");
 //        wrongBtn.setText("Open");

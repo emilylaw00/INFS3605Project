@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CyberSimOutro"></activity>
+        <activity android:name=".VoucherActivity"></activity>
+        <activity android:name=".CyberSimOutro" />
         <activity android:name=".CyberSimFive" />
         <activity android:name=".CyberSimPassword" />
         <activity android:name=".CyberSimFour" />
