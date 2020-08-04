@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/QuestionFourDescription"
-        android:layout_width="296dp"
-        android:layout_height="40dp"
+        android:layout_width="297dp"
+        android:layout_height="116dp"
         android:layout_marginTop="500dp"
         android:fontFamily="@font/lato_bold"
         android:text="TextView"
@@ -31,29 +31,31 @@
 
     <Button
         android:id="@+id/rightBtnFour"
-        android:layout_width="55dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="248dp"
-        android:background="@android:color/transparent"
-        android:fontFamily="@font/lato"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView6" />
-
-    <Button
-        android:id="@+id/wrongBtnFour"
         android:layout_width="19dp"
         android:layout_height="22dp"
-        android:layout_marginBottom="308dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="185dp"
         android:background="@drawable/newbin"
         android:fontFamily="@font/lato"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/wrongBtnFour"
+        android:layout_width="54dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="90dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/lato"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView6"
         app:layout_constraintVertical_bias="1.0" />
