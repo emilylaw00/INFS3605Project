@@ -22,7 +22,7 @@ public class CyberSimOutro extends AppCompatActivity {
 
         title = findViewById(R.id.outroLbl);
         scoreLbl = findViewById(R.id.simsScore);
-        homeBtn = findViewById(R.id.homeBtn);
+        homeBtn = findViewById(R.id.outroHomeBtn);
 
         //retrieve the score from the intent from CyberSimOne
 

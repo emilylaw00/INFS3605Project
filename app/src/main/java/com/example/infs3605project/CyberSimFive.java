@@ -88,7 +88,7 @@ public class CyberSimFive extends AppCompatActivity {
         okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+
                 Intent intent = new Intent(CyberSimFive.this, CyberSimOutro.class);
                 intent.putExtra("score", score);
                 startActivity(intent);
