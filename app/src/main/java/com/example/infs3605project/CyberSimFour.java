@@ -38,10 +38,11 @@ public class CyberSimFour extends AppCompatActivity {
 
         //
 
-        description.setText("Let’s take a look at the final email! What will you do with this one?");
-
-        trashBtn.setText("Trash");
-        openBtn.setText("Open");
+        description.setText("Let’s take a look at the final email! What will you do with this one? \n \n" +
+                "Click either the \"Open In Docs\" button or the bin button");
+//
+//        trashBtn.setText("Trash");
+//        openBtn.setText("Open");
 
         openBtn.setOnClickListener(new View.OnClickListener() {
             @Override
