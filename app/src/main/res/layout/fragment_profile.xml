@@ -34,33 +34,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="13dp"
         android:fontFamily="@font/lato"
         android:gravity="left"
         android:text="Full Name"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="99dp"
-        android:layout_height="111dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profilepic" />
-
-    <Button
-        android:id="@+id/btnEdit"
-        android:layout_width="28dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/ic_baseline_edit_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/backpiece" />
 
     <TextView
         android:id="@+id/txtJoin"
@@ -79,13 +60,13 @@
         android:id="@+id/txtMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="112dp"
         android:fontFamily="@font/lato"
         android:text="Money"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/backpiece" />
 
     <TextView
@@ -93,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="115dp"
         android:layout_marginEnd="200dp"
         android:fontFamily="@font/lato_bold"
         android:text="Awareness Tracker"
@@ -107,13 +88,11 @@
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
         android:layout_marginTop="516dp"
-        android:layout_marginEnd="116dp"
         android:background="@drawable/btncolor"
         android:text="log out"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/btnEdit"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,39 +100,38 @@
         android:id="@+id/txtScore"
         android:layout_width="51dp"
         android:layout_height="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="14dp"
         android:fontFamily="@font/lato"
         android:text="xxx"
         android:textColor="#000000"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView13"
         app:layout_constraintTop_toBottomOf="@+id/txtMoney" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="3dp"
         app:layout_constraintEnd_toStartOf="@+id/txtMoney"
-        app:layout_constraintTop_toBottomOf="@+id/backpiece"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
         app:srcCompat="@drawable/money" />
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="94dp"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="332dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
         app:srcCompat="@drawable/test" />
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="36dp"
+        android:layout_width="34dp"
         android:layout_height="36dp"
         android:layout_marginStart="43dp"
         android:layout_marginTop="5dp"
@@ -166,7 +144,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="14dp"
         android:text="Completed CyberSims"
         android:textColor="#000000"
         app:layout_constraintStart_toEndOf="@+id/imageView17"
