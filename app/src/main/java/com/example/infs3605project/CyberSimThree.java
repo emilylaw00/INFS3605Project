@@ -28,7 +28,8 @@ public class CyberSimThree extends AppCompatActivity {
         wrongBtn = findViewById(R.id.wrongBtnThree);
         score = findViewById(R.id.threeScoreLbl);
 
-        description.setText("Let’s take a look at the next email!");
+        description.setText("Let’s take a look at the next email! \n \n " +
+                "You decide to either click the download button or bin button.");
 
         //retrieve the score from the intent from CyberSimOne
 
@@ -39,8 +40,8 @@ public class CyberSimThree extends AppCompatActivity {
         score.setText("$" + Integer.toString(scoreCount));
         //
 
-        rightBtn.setText("Trash");
-        wrongBtn.setText("Open");
+//        rightBtn.setText("Trash");
+//        wrongBtn.setText("Open");
 
         rightBtn.setOnClickListener(new View.OnClickListener() {
             @Override
