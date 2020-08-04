@@ -65,10 +65,10 @@
 
     <Button
         android:id="@+id/simBtn"
-        android:layout_width="328dp"
-        android:layout_height="359dp"
+        android:layout_width="315dp"
+        android:layout_height="211dp"
         android:layout_marginStart="137dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="205dp"
         android:layout_marginEnd="137dp"
         android:alpha="0.00"
         android:background="@android:color/transparent"
@@ -81,42 +81,43 @@
 
     <Button
         android:id="@+id/purityTestBtn"
-        android:layout_width="223dp"
-        android:layout_height="46dp"
+        android:layout_width="310dp"
+        android:layout_height="168dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="21dp"
         android:layout_marginEnd="45dp"
         android:background="@android:color/transparent"
-        android:text="Security Purity Test"
         android:textAllCaps="true"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/backdrop" />
 
-    <ImageView
+    <TextView
         android:id="@+id/imageView8"
-        android:layout_width="330dp"
-        android:layout_height="359dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="306dp"
+        android:layout_height="217dp"
+        android:layout_marginTop="204dp"
+        android:background="@drawable/rect"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backdrop"
-        app:srcCompat="@drawable/bgblue" />
+        app:layout_constraintTop_toBottomOf="@+id/backdrop" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="445dp"
-        android:text="Lvl 1 - Phising Emails"
+        android:layout_marginTop="158dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="CyberSims"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintHorizontal_bias="0.367"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backdrop" />
+        app:layout_constraintTop_toTopOf="@+id/simBtn" />
 
     <TextView
         android:id="@+id/textView17"
@@ -126,8 +127,9 @@
         android:fontFamily="@font/lato_italic"
         android:text="- How to spot phishing emails"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -138,41 +140,85 @@
         android:fontFamily="@font/lato_italic"
         android:text="- How to make an effective password"
         android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.575"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="267dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="51dp"
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="306dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="43dp"
+        android:background="@drawable/rect"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simBtn"
-        app:srcCompat="@drawable/btncolor" />
+        app:layout_constraintTop_toBottomOf="@+id/backdrop" />
 
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="299dp"
-        android:layout_height="242dp"
-        android:layout_marginTop="35dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:srcCompat="@drawable/thumba" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="323dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="21dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backdrop"
-        app:srcCompat="@drawable/thumbnail1" />
+        app:srcCompat="@drawable/lmao" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="29dp"
         android:layout_height="34dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="132dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simBtn"
+        app:layout_constraintTop_toTopOf="@+id/purityTestBtn"
         app:srcCompat="@drawable/test" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="134dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Security Awarenss Test"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView15" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Measure your cyber awareness here!"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="40dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="161dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/simBtn"
+        app:srcCompat="@drawable/welldone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,8 +3,8 @@
     <solid android:color="@color/blue"/>
 
     <size
-        android:height="400dp"
-        android:width="350dp"/>
+        android:height="375dp"
+        android:width="400dp"/>
     <corners
         android:radius="20dp"
         />

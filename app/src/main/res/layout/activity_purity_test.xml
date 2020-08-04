@@ -29,7 +29,7 @@
             android:layout_width="255dp"
             android:layout_height="43dp"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="65dp"
             android:fontFamily="@font/lily_script_one"
             android:gravity="center_vertical|center"
@@ -37,36 +37,24 @@
             android:textColor="#FFFFFF"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toEndOf="@+id/homeBtn"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/txtTestDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="70dp"
-            android:layout_marginEnd="70dp"
-            android:text="A test that measures your cyber-awareness"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pageTitle" />
-
-        <TextView
             android:id="@+id/textView11"
-            android:layout_width="100dp"
-            android:layout_height="16dp"
+            android:layout_width="114dp"
+            android:layout_height="15dp"
             android:layout_marginStart="144dp"
             android:layout_marginEnd="145dp"
             android:fontFamily="@font/lato_italic"
             android:text="Tick all that apply to you"
+            android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="10sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtTestDesc" />
+            app:layout_constraintTop_toBottomOf="@+id/pageTitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
