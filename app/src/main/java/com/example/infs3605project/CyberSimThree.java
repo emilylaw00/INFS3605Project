@@ -59,8 +59,8 @@ public class CyberSimThree extends AppCompatActivity {
                 //open dialog feedback
                 openFeedbackDialog("You download the proposal form and your computer becomes " +
                         "infected with malware. The next day, you realise that the scammers have accessed your files and " +
-                        "deleted documents worth up to $2500 in value. The email sender's address is unfamiliar. The name of the " +
-                        "attachment is not spelt correctly and file size seems inaccurate. Email encourages you to download " +
+                        "deleted documents worth up to $2500 in value. \n \n The email sender's address is unfamiliar. \n The name of the " +
+                        "attachment is not spelt correctly and file size seems inaccurate. \n Email encourages you to download " +
                         "the attachment.", "#BF6F78", scoreCount-2500);
             }
         });

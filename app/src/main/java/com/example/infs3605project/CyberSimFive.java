@@ -50,7 +50,7 @@ public class CyberSimFive extends AppCompatActivity {
             public void onClick(View v) {
                 //open dialog feedback
                 openFeedbackDialog("By securing your belongings, you save the risk of having your " +
-                        "belongings containing sensitive information within the hands of a stranger. +$5000", "#6EAE94", scoreCount+5000);
+                        "belongings containing sensitive information within the hands of a stranger. \n \n +$5000", "#6EAE94", scoreCount+5000);
             }
         });
 
@@ -59,7 +59,7 @@ public class CyberSimFive extends AppCompatActivity {
             public void onClick(View v) {
                 //open dialog feedback
                 openFeedbackDialog("You turn around and see that someone has stolen your " +
-                        "laptop within the few seconds you left your seat. With your laptop costing " +
+                        "laptop within the few seconds you left your seat. \n \n With your laptop costing " +
                         "$1500 and sensitive company information worth over $3500, you have just lost " +
                         "$5000 in total. ", "#BF6F78", scoreCount-5000);
             }

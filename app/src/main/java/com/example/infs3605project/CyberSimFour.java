@@ -59,7 +59,7 @@ public class CyberSimFour extends AppCompatActivity {
                 //open dialog feedback
                 openFeedbackDialog("Oh no! You have just deleted an important document sent " +
                         "from your senior manager! You are unable to complete your work in time and " +
-                        "he is not happy with your work ethic. As a result, he resents the email, lost an important client and " +
+                        "he is not happy with your work ethic. \n \n As a result, he resents the email, lost an important client and " +
                         "deducts $1000 from your pay. ", "#BF6F78",scoreCount-1000);
             }
         });

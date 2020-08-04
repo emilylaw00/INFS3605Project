@@ -60,9 +60,9 @@ public class CyberSimTwo extends AppCompatActivity {
             public void onClick(View v) {
                 //open dialog feedback
                 openFeedbackDialog("You enter your personal details and realise that you have " +
-                        "$2000 withdrawn from your bank account the next day. The sender's name is not" +
-                        " spelt correctly. the sender's address is not the same address as the official " +
-                        "Netflix's one. Receiver address is not your address. Netflix will never ask for" +
+                        "$2000 withdrawn from your bank account the next day. \n \n The sender's name is not" +
+                        " spelt correctly. \n The sender's address is not the same address as the official " +
+                        "Netflix's one. \n Receiver address is not your address. \n Netflix will never ask for" +
                         " personal information through email.", "#BF6F78",scoreCount-2000);
             }
         });
