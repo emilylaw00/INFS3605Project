@@ -12,7 +12,6 @@ public class Users {
     private int purityScore;
     private int profilePicture;
     private String howDidYouHear;
-    private String userType;
 
 
     public Users() {
@@ -83,11 +82,4 @@ public class Users {
         this.howDidYouHear = howDidYouHear;
     }
 
-    public String getUserType() {
-        return userType;
-    }
-
-    public void setUserType(String userType) {
-        this.userType = userType;
-    }
 }

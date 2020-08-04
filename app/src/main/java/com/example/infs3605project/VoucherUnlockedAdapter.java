@@ -66,7 +66,7 @@ public class VoucherUnlockedAdapter extends RecyclerView.Adapter<VoucherLockedAd
     public void onBindViewHolder(VoucherLockedAdapter.MyViewHolder holder, int position) {
         Vouchers voucher = vList.get(position);
         Log.d("Adapter", "RECYCLER " + position );
-        holder.mImageView.setImageResource(voucher.getImage());
+
 
     }
 

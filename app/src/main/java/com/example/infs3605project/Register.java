@@ -119,10 +119,64 @@ public class Register extends AppCompatActivity {
                             user.put("birthYear", birthYear);
                             user.put("degree", degree);
                             user.put("how did you find out about CyberGrad?", findOutInfo);
+                            user.put("coin balance", 0);
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     Log.d("REGISTER", "onSuccess: user profile is created for " + userID);
+                                }
+                            }) .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.d("REGISTER", "onFailure: " + e.toString());
+                                }
+                            });
+
+                            DocumentReference documentReferenceVoucher = fStore.collection("Vouchers").document(userID); //using USERID to create document
+                            //create user data using hash-map
+                            Map<String, Object> voucher = new HashMap<>();
+                            voucher.put("title", "CameraWorld Giveaway Ticket");
+                            voucher.put("cost", 1000);
+                            voucher.put("value", 50);
+                            voucher.put("status", false);
+                            documentReferenceVoucher.set(voucher).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Log.d("REGISTER", "onSuccess: vouchers added for " + userID);
+                                }
+                            }) .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.d("REGISTER", "onFailure: " + e.toString());
+                                }
+                            });
+
+                            Map<String, Object> voucherTwo = new HashMap<>();
+                            voucherTwo.put("title", "Spice Alley Food Spree");
+                            voucherTwo.put("cost", 800);
+                            voucherTwo.put("value", 40);
+                            voucherTwo.put("status", false);
+                            documentReferenceVoucher.set(voucherTwo).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Log.d("REGISTER", "onSuccess: vouchers added for " + userID);
+                                }
+                            }) .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.d("REGISTER", "onFailure: " + e.toString());
+                                }
+                            });
+
+                            Map<String, Object> voucherThree = new HashMap<>();
+                            voucherTwo.put("title", "Qantas Flight Voucher");
+                            voucherTwo.put("cost", 3000);
+                            voucherTwo.put("value", 100);
+                            voucherTwo.put("status", false);
+                            documentReferenceVoucher.set(voucherThree).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    Log.d("REGISTER", "onSuccess: vouchers added for " + userID);
                                 }
                             }) .addOnFailureListener(new OnFailureListener() {
                                 @Override

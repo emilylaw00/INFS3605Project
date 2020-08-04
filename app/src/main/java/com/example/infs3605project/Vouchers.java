@@ -3,13 +3,13 @@ package com.example.infs3605project;
 public class Vouchers {
 
     private int id;
-    private int image;
+    private String title;
     private int cost;
     private int active;
 
-    public Vouchers(int id, int image, int cost, int active) {
+    public Vouchers(int id, String title, int cost, int active) {
         this.id= id;
-        this.image = image;
+        this.title = title;
         this.cost = cost;
         this.active=active;
 
@@ -31,12 +31,12 @@ public class Vouchers {
         this.active = active;
     }
 
-    public int getImage() {
-        return image;
+    public String getTitle() {
+        return title;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getVoucherCost() {

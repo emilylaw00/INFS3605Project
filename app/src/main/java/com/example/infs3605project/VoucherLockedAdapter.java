@@ -66,7 +66,7 @@ public class VoucherLockedAdapter extends RecyclerView.Adapter<VoucherLockedAdap
             Log.d("Adapter", "RECYCLER " + position );
 
             //set the items in the viewholder
-            holder.mImageView.setImageResource(voucher.getImage());
+
             String cost =  Integer.toString(voucher.getVoucherCost());
             holder.costLabel.setText(cost);
 
