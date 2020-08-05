@@ -1,14 +1,17 @@
 package com.example.infs3605project;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CyberSimPassword extends AppCompatActivity {
@@ -29,6 +32,10 @@ public class CyberSimPassword extends AppCompatActivity {
         final int scoreCount = extras.getInt("score");
 
         Log.d("CSThree:", Integer.toString(scoreCount));
+
+        //
+
+        openDialog("From reading the proposal form that your senior manager sent you, you are required to create an account on TechStar Messenger, a tool used to communicate with the client.", R.drawable.passwordicon);
 
         //
 
@@ -146,7 +153,40 @@ public class CyberSimPassword extends AppCompatActivity {
         return false;
     }
 
+    public void openDialog(String desc, int pictype){
+        //method to call the dialog
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.dialog_next, null);
 
+        //initialise the elements
+        TextView dialogLbl = view.findViewById(R.id.dialogFeedbackLbl);
+        TextView descTxt = view.findViewById(R.id.dialogFeedbackDesc);
+        Button okBtn = view.findViewById(R.id.DialogFeedbackBtn);
+        ImageView pic = view.findViewById(R.id.icon);
+
+        descTxt.setText(desc); //set the description
+        dialogLbl.setText("NEXT...");
+        pic.setImageResource(pictype);
+
+        //create the dialog
+        final AlertDialog alertDialog = new AlertDialog.Builder(this)
+                .setView(view)
+                .create();
+
+        okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                alertDialog.cancel();
+
+
+            }
+
+        });
+
+        alertDialog.show();
+
+    }
 
 
 

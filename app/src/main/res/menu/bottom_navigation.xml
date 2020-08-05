@@ -17,7 +17,7 @@
         />
     <item
         android:id="@+id/nav_bot"
-        android:icon="@drawable/ic_baseline_android_24"
-        android:title="ChatBot"
+        android:icon="@drawable/ic_baseline_storefront_24"
+        android:title="Store"
         />
 </menu>

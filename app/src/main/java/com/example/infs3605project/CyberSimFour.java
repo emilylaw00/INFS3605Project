@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CyberSimFour extends AppCompatActivity {
@@ -38,17 +39,18 @@ public class CyberSimFour extends AppCompatActivity {
 
         //
 
-        description.setText("Let’s take a look at the final email! What will you do with this one?");
-
-        trashBtn.setText("Trash");
-        openBtn.setText("Open");
+        description.setText("Let’s take a look at the final email! What will you do with this one? \n \n" +
+                "Click either the \"Open In Docs\" button or the bin button");
+//
+//        trashBtn.setText("Trash");
+//        openBtn.setText("Open");
 
         openBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //open dialog feedback
                 openFeedbackDialog("Good work! You have thoroughly checked the sender address, name and receiver name. " +
-                        "You are now able to safely open the document and continue your work.", "#6EAE94", scoreCount+1000);
+                        "You are now able to safely open the document and continue your work.", "+$1000", R.drawable.tickker,"#49B342", scoreCount+1000);
             }
         });
 
@@ -58,8 +60,8 @@ public class CyberSimFour extends AppCompatActivity {
                 //open dialog feedback
                 openFeedbackDialog("Oh no! You have just deleted an important document sent " +
                         "from your senior manager! You are unable to complete your work in time and " +
-                        "he is not happy with your work ethic. As a result, he resents the email, lost an important client and " +
-                        "deducts $1000 from your pay. ", "#BF6F78",scoreCount-1000);
+                        "he is not happy with your work ethic. \n \n As a result, he resents the email, lost an important client and " +
+                        "deducts $1000 from your pay. ", "-$1000", R.drawable.close, "#D54335",scoreCount-1000);
             }
         });
 
@@ -67,7 +69,7 @@ public class CyberSimFour extends AppCompatActivity {
     }
 
 
-    public void openFeedbackDialog(String desc, final String colour, final int score){
+    public void openFeedbackDialog(String desc, String increment, int pictype, final String colour, final int score){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.dialog_feedback, null);
@@ -75,10 +77,14 @@ public class CyberSimFour extends AppCompatActivity {
         //initialise the elements
         TextView descTxt = view.findViewById(R.id.dialogFeedbackDesc);
         Button okBtn = view.findViewById(R.id.DialogFeedbackBtn);
+        TextView points = view.findViewById(R.id.increment);
         ConstraintLayout dialogBg = view.findViewById(R.id.feedbackDialogBg);
+        ImageView pic = view.findViewById(R.id.icon);
 
         descTxt.setText(desc); //set the description
         dialogBg.setBackgroundColor(Color.parseColor(colour));
+        pic.setImageResource(pictype);
+        points.setText(increment);
 
         //create the dialog
         final AlertDialog alertDialog = new AlertDialog.Builder(this)

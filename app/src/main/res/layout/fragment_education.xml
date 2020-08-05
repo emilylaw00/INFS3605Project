@@ -31,16 +31,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/backdrop" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="68dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profilepic" />
-
     <TextView
         android:id="@+id/txtGameMoney"
         android:layout_width="wrap_content"

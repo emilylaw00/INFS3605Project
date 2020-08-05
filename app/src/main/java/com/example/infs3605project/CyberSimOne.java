@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CyberSimOne extends AppCompatActivity {
@@ -44,7 +45,7 @@ public class CyberSimOne extends AppCompatActivity {
                 //open dialog feedback
                 openDialog("You have just connected securely to a WiFi connection through a VPN. " +
                         "You are now ready to go. \n \n By connecting to a VPN that TechStar trusts, I have " +
-                        "ensured that my information is secure and encrypted, I can begin my work.", "#6EAE94", scoreCount+3500);
+                        "ensured that my information is secure and encrypted, I can begin my work.", "+$3500", R.drawable.tickker, "#49B342", scoreCount+3500);
             }
         });
 
@@ -54,24 +55,29 @@ public class CyberSimOne extends AppCompatActivity {
                 //open dialog feedback
                 openDialog("By connecting to an insecure Wi-Fi, hackers are able to tamper with" +
                         " the connection and steal any confidential information. A VPN should be used " +
-                        "to ensure that your information remains encrypted on public Wi-Fi. ", "#BF6F78", scoreCount-3500);
+                        "to ensure that your information remains encrypted on public Wi-Fi. ", "-$3500", R.drawable.close ,"#D54335", scoreCount-3500);
             }
         });
 
     }
 
-    public void openDialog(String desc, final String colour, final int currentScore){
+    public void openDialog(String desc, String increment, int pictype, final String colour, final int currentScore){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.dialog_feedback, null);
 
         //initialise the elements
         TextView descTxt = view.findViewById(R.id.dialogFeedbackDesc);
+        TextView points = view.findViewById(R.id.increment);
         Button okBtn = view.findViewById(R.id.DialogFeedbackBtn);
         ConstraintLayout dialogBg = view.findViewById(R.id.feedbackDialogBg);
+        ImageView pic = view.findViewById(R.id.icon);
+
 
         descTxt.setText(desc); //set the description
         dialogBg.setBackgroundColor(Color.parseColor(colour));
+        pic.setImageResource(pictype);
+        points.setText(increment);
 
         //create the dialog
         final AlertDialog alertDialog = new AlertDialog.Builder(this)

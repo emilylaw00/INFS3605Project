@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CyberSimThree extends AppCompatActivity {
@@ -28,7 +29,8 @@ public class CyberSimThree extends AppCompatActivity {
         wrongBtn = findViewById(R.id.wrongBtnThree);
         score = findViewById(R.id.threeScoreLbl);
 
-        description.setText("Let’s take a look at the next email!");
+        description.setText("Let’s take a look at the next email! \n \n " +
+                "You decide to either click the download button or bin button.");
 
         //retrieve the score from the intent from CyberSimOne
 
@@ -39,8 +41,8 @@ public class CyberSimThree extends AppCompatActivity {
         score.setText("$" + Integer.toString(scoreCount));
         //
 
-        rightBtn.setText("Trash");
-        wrongBtn.setText("Open");
+//        rightBtn.setText("Trash");
+//        wrongBtn.setText("Open");
 
         rightBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +50,7 @@ public class CyberSimThree extends AppCompatActivity {
                 //open dialog feedback
                 openFeedbackDialog("Good work! You have successfully avoided a spear phishing " +
                         "& malware scam. The name of the attachment is not spelt correctly and file " +
-                        "size seems inaccurate - good work!", "#6EAE94", scoreCount+2500);
+                        "size seems inaccurate - good work!", "+$2500", R.drawable.tickker, "#49B342", scoreCount+2500);
             }
         });
 
@@ -58,27 +60,31 @@ public class CyberSimThree extends AppCompatActivity {
                 //open dialog feedback
                 openFeedbackDialog("You download the proposal form and your computer becomes " +
                         "infected with malware. The next day, you realise that the scammers have accessed your files and " +
-                        "deleted documents worth up to $2500 in value. The email sender's address is unfamiliar. The name of the " +
-                        "attachment is not spelt correctly and file size seems inaccurate. Email encourages you to download " +
-                        "the attachment.", "#BF6F78", scoreCount-2500);
+                        "deleted documents worth up to $2500 in value. \n \n The email sender's address is unfamiliar. \n The name of the " +
+                        "attachment is not spelt correctly and file size seems inaccurate. \n Email encourages you to download " +
+                        "the attachment.", "-$2500",R.drawable.close, "#D54335", scoreCount-2500);
             }
         });
 
 
     }
 
-    public void openFeedbackDialog(String desc, final String colour, final int score){
+    public void openFeedbackDialog(String desc, String increment, int pictype, final String colour, final int score){
         //method to call the dialog
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.dialog_feedback, null);
 
         //initialise the elements
         TextView descTxt = view.findViewById(R.id.dialogFeedbackDesc);
+        TextView points = view.findViewById(R.id.increment);
         Button okBtn = view.findViewById(R.id.DialogFeedbackBtn);
         ConstraintLayout dialogBg = view.findViewById(R.id.feedbackDialogBg);
+        ImageView pic = view.findViewById(R.id.icon);
 
         descTxt.setText(desc); //set the description
         dialogBg.setBackgroundColor(Color.parseColor(colour));
+        pic.setImageResource(pictype);
+        points.setText(increment);
 
         //create the dialog
         final AlertDialog alertDialog = new AlertDialog.Builder(this)

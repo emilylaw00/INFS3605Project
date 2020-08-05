@@ -8,6 +8,19 @@
 
 
     <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="458dp"
+        android:layout_height="507dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/backkkk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.403"
+        app:srcCompat="@drawable/cafereadyy" />
+
+    <ImageView
         android:id="@+id/backkkk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,25 +33,28 @@
 
     <TextView
         android:id="@+id/QuestionFiveDescription"
-        android:layout_width="296dp"
-        android:layout_height="40dp"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:layout_marginTop="344dp"
         android:fontFamily="@font/lato_bold"
         android:text="TextView"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/rightBtnFive"
         android:layout_width="300dp"
-        android:layout_height="80dp"
+        android:layout_height="95dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/btnlightblu"
-        android:fontFamily="@font/lato"
+        android:fontFamily="@font/lato_bold"
         android:text="Button"
         android:textAllCaps="false"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/QuestionFiveDescription" />
@@ -46,12 +62,13 @@
     <Button
         android:id="@+id/wrongBtnFive"
         android:layout_width="300dp"
-        android:layout_height="80dp"
+        android:layout_height="95dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/btnlightblu"
-        android:fontFamily="@font/lato"
+        android:fontFamily="@font/lato_bold"
         android:text="Button"
         android:textAllCaps="false"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/rightBtnFive"
         app:layout_constraintTop_toBottomOf="@+id/rightBtnFive" />
 
@@ -70,7 +87,6 @@
         app:layout_constraintHorizontal_bias="0.964"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
