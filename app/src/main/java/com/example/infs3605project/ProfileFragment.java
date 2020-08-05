@@ -130,7 +130,7 @@ public class ProfileFragment extends Fragment {
         int month = calendar.get(calendar.MONTH);
         int day = calendar.get(calendar.DAY_OF_MONTH);
         //getting today's date
-        final String todayString = "30/02/2020";//year + " " + month + " " + day;
+        final String todayString = year + " " + month + " " + day;
 
         //return the stored data from SharedPreferences
         final SharedPreferences preferences = getActivity().getSharedPreferences("DAILYREWARDSPREFS", 0);
@@ -189,7 +189,6 @@ public class ProfileFragment extends Fragment {
             });
         }
         }
-
 
         //dailyReward dialog
         public void showDialog() {
