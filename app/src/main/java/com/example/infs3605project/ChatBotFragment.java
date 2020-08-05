@@ -15,7 +15,7 @@ public class ChatBotFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_chatbot, container, false);
+        View v = inflater.inflate(R.layout.fragment_store, container, false);
 
         startActivity(new Intent(getActivity(),VoucherActivity.class));
 
