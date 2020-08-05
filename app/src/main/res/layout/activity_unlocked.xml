@@ -21,7 +21,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:minHeight="?actionBarSize"
-            android:text="Vouchers UK"
+            android:text="My Vouchers"
             android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
             android:textSize="33sp"
             android:textStyle="bold"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/backBtnLocked"
+            android:id="@+id/backBtnUnlocked"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -56,7 +56,7 @@
             android:layout_marginLeft="120dp"
             android:text="Coin Balance:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:layout_constraintBaseline_toBaselineOf="@+id/lockedCoinBalance"
+            app:layout_constraintBaseline_toBaselineOf="@+id/unlockedCoinBalance"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -79,8 +79,9 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/lockedCoinBalance"
+            app:layout_constraintStart_toEndOf="@+id/unlockedCoinBalance"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/money" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

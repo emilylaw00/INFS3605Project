@@ -58,8 +58,8 @@ public class VoucherUnlockedActivity extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        backBtn = findViewById(R.id.backBtnLocked);
-        coinBalance = findViewById(R.id.voucherUnlockedTitle);
+        backBtn = findViewById(R.id.backBtnUnlocked);
+        coinBalance = findViewById(R.id.unlockedCoinBalance);
         mRecyclerView = findViewById(R.id.rcUnlocked);
 
         userId = fAuth.getCurrentUser().getUid();
@@ -70,14 +70,23 @@ public class VoucherUnlockedActivity extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 //update the data
-                int money = documentSnapshot.getLong("coin balance").intValue();
-                coinBalance.setText(Integer.toString(money));
+                Long money = documentSnapshot.getLong("coin balance");
+                int cost = money.intValue();
+
+                coinBalance.setText(Integer.toString(cost));
             }
         });
 
         createList();
 
         buildRecyclerView();
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
     }
 

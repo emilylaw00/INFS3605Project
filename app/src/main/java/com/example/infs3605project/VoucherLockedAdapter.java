@@ -18,7 +18,7 @@ public class VoucherLockedAdapter extends RecyclerView.Adapter<VoucherLockedAdap
         //adapter for the locked vouchers
 
         Context context;
-        List<Vouchers> vList = new ArrayList<>();
+        List<Vouchers> vList;
         private OnItemClickListener mListener;
 
         public VoucherLockedAdapter(List<Vouchers> mvList, Context mContext) {
