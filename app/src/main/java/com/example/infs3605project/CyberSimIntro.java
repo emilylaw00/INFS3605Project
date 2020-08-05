@@ -36,6 +36,7 @@ public class CyberSimIntro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                     description.setText("Being a coffee lover, you decide to go to a nearby cafe to work. You walk in, order a coffee and find a nice spot to sit at the back");
+                    graphic.setImageResource(R.drawable.bb);
                     nextBtn.setVisibility(View.GONE);
                     startBtn.setVisibility(View.VISIBLE);
                 }
