@@ -22,7 +22,6 @@
         <activity android:name=".CyberSimIntro" />
         <activity android:name=".PurityScore" />
         <activity android:name=".PurityTest" />
-        <activity android:name=".Profile" />
         <activity android:name=".Detailed" />
         <activity android:name=".Login" />
         <activity android:name=".Register">
@@ -32,13 +31,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"
