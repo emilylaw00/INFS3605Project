@@ -6,7 +6,7 @@
     tools:context=".VoucherLockedFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rc"
+        android:id="@+id/rcUnlocked"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

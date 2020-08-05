@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -39,7 +38,7 @@ public class VoucherLockedFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_locked, container, false);
 
         //initialise
-        mRecyclerView = v.findViewById(R.id.rc);
+        mRecyclerView = v.findViewById(R.id.rcUnlocked);
 
         //call methods to create the recyclerview
         createList();

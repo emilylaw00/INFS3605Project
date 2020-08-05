@@ -27,16 +27,16 @@ public class VoucherLockedAdapter extends RecyclerView.Adapter<VoucherLockedAdap
 
 
         public static class MyViewHolder extends RecyclerView.ViewHolder {
-            public ImageView mImageView;
-            public TextView costLabel;
+
+            public TextView costLabel, title;
 
 
             public MyViewHolder(View itemView, final OnItemClickListener listener) {
                 super(itemView);
 
                 //initialising
-                mImageView = itemView.findViewById(R.id.imageView);
-                costLabel = itemView.findViewById(R.id.voucherPriceLbl);
+                title = itemView.findViewById(R.id.voucherLockedTitle);
+                costLabel = itemView.findViewById(R.id.priceLbl);
 
                 itemView.setOnClickListener(new View.OnClickListener() { //allows the recycler items to be clicked for further action
                     @Override
@@ -65,10 +65,9 @@ public class VoucherLockedAdapter extends RecyclerView.Adapter<VoucherLockedAdap
             Vouchers voucher = vList.get(position);
             Log.d("Adapter", "RECYCLER " + position );
 
-            //set the items in the viewholder
-
-            String cost =  Integer.toString(voucher.getVoucherCost());
-            holder.costLabel.setText(cost);
+            //String cost =  Integer.toString(voucher.getVoucherCost());
+            holder.costLabel.setText("3000");
+            holder.title.setText("Go away");
 
         }
 

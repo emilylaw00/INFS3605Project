@@ -31,7 +31,14 @@ public class AwardFragment extends Fragment {
         lockedBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(getActivity(), VoucherLockedActivity.class));
+            }
+        });
 
+        unlockedBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), VoucherUnlockedActivity.class));
             }
         });
 

@@ -5,13 +5,12 @@ public class Vouchers {
     private int id;
     private String title;
     private int cost;
-    private int active;
+    private boolean active;
 
-    public Vouchers(int id, String title, int cost, int active) {
-        this.id= id;
+    public Vouchers(String title, int cost, boolean active) {
         this.title = title;
         this.cost = cost;
-        this.active=active;
+        this.active = active;
 
     }
 
@@ -23,11 +22,11 @@ public class Vouchers {
         this.id = id;
     }
 
-    public int getActive() {
+    public boolean getActive() {
         return active;
     }
 
-    public void setActive(int active) {
+    public void setActive(boolean active) {
         this.active = active;
     }
 

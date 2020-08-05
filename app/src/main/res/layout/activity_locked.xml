@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VoucherActivity">
+    tools:context=".VoucherLockedActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/vConstraintLayout"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/backBtnEditChecklist"
+            android:id="@+id/backBtnLocked"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -56,11 +56,11 @@
             android:layout_marginLeft="120dp"
             android:text="Coin Balance:"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            app:layout_constraintBaseline_toBaselineOf="@+id/vCoinBalance"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lockedCoinBalance"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/vCoinBalance"
+            android:id="@+id/lockedCoinBalance"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -79,7 +79,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/vCoinBalance"
+            app:layout_constraintStart_toEndOf="@+id/lockedCoinBalance"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/money" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -92,10 +92,10 @@
         android:layout_marginTop="1dp"
         android:text="switch"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rc" />
+        app:layout_constraintTop_toBottomOf="@+id/rcLocked" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rc"
+        android:id="@+id/rcLocked"
         android:layout_width="391dp"
         android:layout_height="610dp"
         android:layout_marginStart="1dp"
