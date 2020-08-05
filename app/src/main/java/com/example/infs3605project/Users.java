@@ -7,12 +7,21 @@ public class Users {
     private String email;
     private String firstName;
     private String lastName;
-    private int yearOfBirth; //to find age for data analytics
+    private String yearOfBirth; //to find age for data analytics
     private String degree;
-    private int purityScore;
-    private int profilePicture;
+    private int coinScore;
     private String howDidYouHear;
 
+
+    public Users(String email, String firstName, String lastName, String yearOfBirth, String degree, int coinScore, String howDidYouHear) {
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.yearOfBirth = yearOfBirth;
+        this.degree = degree;
+        this.coinScore = coinScore;
+        this.howDidYouHear = howDidYouHear;
+    }
 
     public Users() {
   
@@ -42,11 +51,11 @@ public class Users {
         this.lastName = lastName;
     }
 
-    public int getYearOfBirth() {
+    public String getYearOfBirth() {
         return yearOfBirth;
     }
 
-    public void setYearOfBirth(int yearOfBirth) {
+    public void setYearOfBirth(String yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
     }
 
@@ -59,20 +68,14 @@ public class Users {
     }
 
     public int getPurityScore() {
-        return purityScore;
+        return coinScore;
     }
 
     public void setPurityScore(int purityScore) {
-        this.purityScore = purityScore;
+        this.coinScore = purityScore;
     }
 
-    public int getProfilePicture() {
-        return profilePicture;
-    }
 
-    public void setProfilePicture(int profilePicture) {
-        this.profilePicture = profilePicture;
-    }
 
     public String getHowDidYouHear() {
         return howDidYouHear;
