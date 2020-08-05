@@ -67,6 +67,10 @@ public class VoucherUnlockedAdapter extends RecyclerView.Adapter<VoucherLockedAd
         Vouchers voucher = vList.get(position);
         Log.d("Adapter", "RECYCLER " + position );
 
+        //String cost =  Integer.toString(voucher.getVoucherCost());
+        holder.costLabel.setText(Integer.toString(voucher.getVoucherCost()));
+        holder.title.setText(voucher.getTitle());
+
 
     }
 

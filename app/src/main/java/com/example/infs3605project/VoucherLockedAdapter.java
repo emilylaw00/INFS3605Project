@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VoucherLockedAdapter extends RecyclerView.Adapter<VoucherLockedAdapter.MyViewHolder> {
@@ -17,7 +18,7 @@ public class VoucherLockedAdapter extends RecyclerView.Adapter<VoucherLockedAdap
         //adapter for the locked vouchers
 
         Context context;
-        private List<Vouchers> vList;
+        List<Vouchers> vList = new ArrayList<>();
         private OnItemClickListener mListener;
 
         public VoucherLockedAdapter(List<Vouchers> mvList, Context mContext) {
@@ -66,8 +67,8 @@ public class VoucherLockedAdapter extends RecyclerView.Adapter<VoucherLockedAdap
             Log.d("Adapter", "RECYCLER " + position );
 
             //String cost =  Integer.toString(voucher.getVoucherCost());
-            holder.costLabel.setText("3000");
-            holder.title.setText("Go away");
+            holder.costLabel.setText(Integer.toString(voucher.getVoucherCost()));
+            holder.title.setText(voucher.getTitle());
 
         }
 
