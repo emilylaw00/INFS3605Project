@@ -10,7 +10,7 @@
         android:id="@+id/textView35"
         android:layout_width="300dp"
         android:layout_height="220dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="265dp"
         android:background="@drawable/bgblue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
