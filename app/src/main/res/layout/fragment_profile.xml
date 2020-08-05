@@ -35,14 +35,13 @@
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="21dp"
         android:background="@drawable/btncolor"
         android:text="log out"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtScore" />
+        app:layout_constraintTop_toBottomOf="@+id/dailyRewardBtn" />
 
     <ImageView
         android:id="@+id/imageView17"
@@ -113,11 +112,14 @@
 
     <Button
         android:id="@+id/dailyRewardBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/btnyellow"
         android:text="CLAIM daily reward"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoutBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/txtScore" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
