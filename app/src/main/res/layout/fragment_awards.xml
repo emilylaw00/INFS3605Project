@@ -6,23 +6,107 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="300dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="265dp"
+        android:background="@drawable/bgblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cybertipstitle2" />
+
+    <TextView
+        android:id="@+id/cybertipstitle2"
+        android:layout_width="409dp"
+        android:layout_height="59dp"
+        android:background="@drawable/topflap"
+        android:fontFamily="@font/lily_script_one"
+        android:gravity="center_vertical|center"
+        android:text="Store"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/spendBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="148dp"
-        android:text="Spend my coins"
+        android:layout_width="303dp"
+        android:layout_height="206dp"
+        android:layout_marginTop="88dp"
+        android:background="@android:color/transparent"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/seeBtn"
+        android:layout_width="298dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="265dp"
+        android:background="@android:color/transparent"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cybertipstitle2" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="300dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bgblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cybertipstitle2" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="348dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cybertipstitle2"
+        app:srcCompat="@drawable/store" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="304dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="265dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cybertipstitle2"
+        app:srcCompat="@drawable/voucher" />
+
+    <TextView
+        android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="120dp"
-        android:text="Use my vouchers"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Spend Coins"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spendBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:text="Use Vouchers"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
