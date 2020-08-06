@@ -102,11 +102,11 @@ public class CyberSimPassword extends AppCompatActivity {
                 int penalty = counter * 100;
 
                 if(counter > 0){
-                    openFeedbackDialog("Great, you made your password for the account but You make some passwords mistakes ("+ counter+"), " +
-                            "unfortunately you lost $100 per mistake you made. Remember to always use a combination of special characters, capitals, lower case and digits to avoid being an easy target.  ", "-$"+penalty, R.drawable.close, "#D54335", scoreCount-penalty);
+                    openFeedbackDialog("Great, you made your password for the account but you made a few mistakes ("+ counter+"), " +
+                            "unfortunately you lost $100 per mistake you made. \n \n Remember to always use a combination of special characters, capitals, lower case and digits to avoid being an easy target.  ", "-$"+penalty, R.drawable.close, "#D54335", scoreCount-penalty);
                 } else {
                     openFeedbackDialog("Good work! You made a great password in the first go! " +
-                            "A strong password always contains the use of ", "+$300", R.drawable.tickker,"#49B342", scoreCount+300);
+                            "\n \n A strong password always contains a combination of special characters, capitals, lower case and digits.", "+$300", R.drawable.tickker,"#49B342", scoreCount+300);
 
                 }
 
