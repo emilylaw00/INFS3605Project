@@ -60,7 +60,7 @@
         android:id="@+id/dailyRewardBtn"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/btnyellow"
         android:text="Daily Reward!"
         android:textColor="#FFFFFF"
@@ -163,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lato_italic"
                 android:text="Your money: "
-                android:textSize="8sp"
+                android:textSize="11sp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView9"
                 app:layout_constraintStart_toStartOf="@+id/imageView9"
                 app:layout_constraintTop_toBottomOf="@+id/imageView9" />
@@ -214,7 +214,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lato_italic"
                 android:text="Current Purity:"
-                android:textSize="8sp"
+                android:textSize="11sp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView13"
                 app:layout_constraintStart_toStartOf="@+id/imageView13"
                 app:layout_constraintTop_toBottomOf="@+id/imageView13" />
