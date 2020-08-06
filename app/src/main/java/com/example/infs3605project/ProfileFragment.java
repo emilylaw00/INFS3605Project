@@ -82,7 +82,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 //update the data
-                mUserName.setText(documentSnapshot.getString("firstName"));
+                mUserName.setText(documentSnapshot.getString("firstName") + " " + documentSnapshot.getString("lastName"));
             }
         });
 

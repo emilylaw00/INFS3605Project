@@ -300,7 +300,7 @@ public class VoucherLockedActivity extends AppCompatActivity {
 
         final DocumentReference dR = fStore.collection("Vouchers").document(userId);
 
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+        dR.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.isSuccessful()) {
@@ -339,7 +339,20 @@ public class VoucherLockedActivity extends AppCompatActivity {
             public Void apply(@NonNull Transaction transaction) throws FirebaseFirestoreException {
 
                 transaction.update(docRef, "coin balance", newBalance);
+
                 Log.d("profile", "transaction SUCCESSFULL");
+                return null;
+            }
+        });
+
+        fStore.runTransaction(new Transaction.Function<Void>() {
+            @Nullable
+            @Override
+            public Void apply(@NonNull Transaction transaction) throws FirebaseFirestoreException {
+
+                transaction.update(dR, "status", true);
+
+                Log.d("VOUCHER UPDATE", "status updated!");
                 return null;
             }
         });

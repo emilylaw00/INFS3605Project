@@ -135,8 +135,8 @@ public class Register extends AppCompatActivity {
                             DocumentReference documentReferenceVoucher = fStore.collection("Vouchers").document(userID); //using USERID to create document
                             //create user data using hash-map
                             Map<String, Object> voucherThree = new HashMap<>();
-                            voucherThree.put("title", "Qantas Flight Voucher");
-                            voucherThree.put("cost", 3000);
+                            voucherThree.put("title", "Qantas Flight Voucher $50 off your next purchase");
+                            voucherThree.put("cost", 10000);
                             voucherThree.put("value", 100);
                             voucherThree.put("status", false);
                             documentReferenceVoucher.set(voucherThree).addOnSuccessListener(new OnSuccessListener<Void>() {
