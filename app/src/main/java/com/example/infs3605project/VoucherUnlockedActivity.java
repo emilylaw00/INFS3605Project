@@ -1,5 +1,6 @@
 package com.example.infs3605project;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -84,7 +85,14 @@ public class VoucherUnlockedActivity extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                startActivity(new Intent(VoucherUnlockedActivity.this, MainActivity.class));
+            }
+        });
+
+        switchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(VoucherUnlockedActivity.this, VoucherLockedActivity.class));
             }
         });
 
