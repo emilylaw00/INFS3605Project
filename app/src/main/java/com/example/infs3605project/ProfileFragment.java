@@ -40,7 +40,7 @@ import java.util.concurrent.Executor;
 
 public class ProfileFragment extends Fragment {
 
-    TextView mUserName, mUserScore, mMoney, birthYear, areaOfStudy;
+    TextView mUserName, mUserScore, mMoney, birthYear, areaOfStudy, email;
     ImageView mProfilePic;
     Button mLogoutBtn;
     FirebaseAuth fAuth;
@@ -63,6 +63,7 @@ public class ProfileFragment extends Fragment {
         getDailyAwardBtn = v.findViewById(R.id.dailyRewardBtn);
         birthYear = v.findViewById(R.id.txtBirthYear);
         areaOfStudy = v.findViewById(R.id.txtAreaOfStudy);
+        email = v.findViewById(R.id.txtemail);
 
         //preset the daily award btn
         getDailyAwardBtn.setVisibility(View.GONE);
@@ -80,6 +81,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 //update the data
+                email.setText(documentSnapshot.getString("email"));
                 mUserName.setText(documentSnapshot.getString("firstName") + " " + documentSnapshot.getString("lastName"));
                 birthYear.setText(documentSnapshot.getString("birthYear"));
                 areaOfStudy.setText(documentSnapshot.getString("degree"));

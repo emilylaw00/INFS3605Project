@@ -127,9 +127,11 @@
         android:id="@+id/imageView21"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView27"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView27"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
         app:layout_constraintTop_toTopOf="@+id/textView27"
         app:srcCompat="@drawable/welldone" />
 
@@ -150,9 +152,11 @@
         android:id="@+id/imageView22"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView28"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView28"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="@+id/textView28"
         app:layout_constraintTop_toTopOf="@+id/textView28"
         app:srcCompat="@drawable/welldone" />
 
