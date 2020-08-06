@@ -62,6 +62,7 @@ public class VoucherUnlockedActivity extends AppCompatActivity {
         backBtn = findViewById(R.id.backBtnUnlocked);
         coinBalance = findViewById(R.id.unlockedCoinBalance);
         mRecyclerView = findViewById(R.id.rcUnlocked);
+        switchBtn = findViewById(R.id.unlockedSwitch);
 
         userId = fAuth.getCurrentUser().getUid();
         Log.d("PROFILE", "USERID: " + userId);
