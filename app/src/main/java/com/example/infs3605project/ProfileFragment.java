@@ -40,7 +40,7 @@ import java.util.concurrent.Executor;
 
 public class ProfileFragment extends Fragment {
 
-    TextView mUserName, mUserScore, mMoney;
+    TextView mUserName, mUserScore, mMoney, birthYear, areaOfStudy;
     ImageView mProfilePic;
     Button mLogoutBtn;
     FirebaseAuth fAuth;
@@ -61,13 +61,11 @@ public class ProfileFragment extends Fragment {
         mLogoutBtn = v.findViewById(R.id.logoutBtn);
         mMoney = v.findViewById(R.id.txtMoney);
         getDailyAwardBtn = v.findViewById(R.id.dailyRewardBtn);
-
+        birthYear = v.findViewById(R.id.txtBirthYear);
+        areaOfStudy = v.findViewById(R.id.txtAreaOfStudy);
 
         //preset the daily award btn
         getDailyAwardBtn.setVisibility(View.GONE);
-
-        //method that actions the daily award function
-
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -83,6 +81,11 @@ public class ProfileFragment extends Fragment {
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 //update the data
                 mUserName.setText(documentSnapshot.getString("firstName") + " " + documentSnapshot.getString("lastName"));
+                birthYear.setText(documentSnapshot.getString("birthYear"));
+                areaOfStudy.setText(documentSnapshot.getString("degree"));
+                int money = documentSnapshot.getLong("coin balance").intValue();
+                mMoney.setText(Integer.toString(money));
+
             }
         });
 
@@ -91,22 +94,9 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 //update the data
-                mUserScore.setText(documentSnapshot.getString("Score"));
+                mUserScore.setText(documentSnapshot.getString("Score")+"/20");
             }
         });
-
-        DocumentReference drrr = fStore.collection("Users").document(userId);
-        drrr.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                //update the data
-                int money = documentSnapshot.getLong("coin balance").intValue();
-                mMoney.setText(Integer.toString(money));
-            }
-        });
-
-
-
 
         getDailyReward();
 
@@ -173,7 +163,7 @@ public class ProfileFragment extends Fragment {
 
                                     user = new Users(email, fname, lname, birthyear, degree, coinBalance, findOutInfo); //user data saved
 
-                                    updateValue(coinBalance + 250, docRef);
+                                    updateValue(coinBalance + 500, docRef);
 
                                 } else {
                                     Log.d("Profile frag", "No such document");

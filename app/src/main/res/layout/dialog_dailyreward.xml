@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:gravity="center_horizontal"
-                android:text="Congratulations! You just an earned your daily login reward of 250 coins."
+                android:text="Congratulations! You just an earned your daily login reward of 500 coins."
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="#623B01"

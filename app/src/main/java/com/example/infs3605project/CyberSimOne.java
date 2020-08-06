@@ -45,7 +45,7 @@ public class CyberSimOne extends AppCompatActivity {
                 //open dialog feedback
                 openDialog("You have just connected securely to a WiFi connection through a VPN. " +
                         "You are now ready to go. \n \n By connecting to a VPN that TechStar trusts, I have " +
-                        "ensured that my information is secure and encrypted, I can begin my work.", "+$3500", R.drawable.tickker, "#49B342", scoreCount+3500);
+                        "ensured that my information is secure and encrypted, I can begin my work.", "+$2000", R.drawable.tickker, "#49B342", scoreCount+2000);
             }
         });
 
@@ -55,7 +55,7 @@ public class CyberSimOne extends AppCompatActivity {
                 //open dialog feedback
                 openDialog("By connecting to an insecure Wi-Fi, hackers are able to tamper with" +
                         " the connection and steal any confidential information. A VPN should be used " +
-                        "to ensure that your information remains encrypted on public Wi-Fi. ", "-$3500", R.drawable.close ,"#D54335", scoreCount-3500);
+                        "to ensure that your information remains encrypted on public Wi-Fi. ", "-$2000", R.drawable.close ,"#D54335", scoreCount-2000);
             }
         });
 
